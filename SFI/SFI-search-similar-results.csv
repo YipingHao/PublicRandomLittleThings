@@ -1,0 +1,3 @@
+"IsDifferentContent","IsReferencePath","FullName","LengthBytes","CreationTime","LastWriteTime","SHA256","Preview"
+"True","False","G:\code\PublicRandomLittleThings\SFI\SFISeparabilityStrategy.md","12683","2026/7/14 13:44:00","2026/7/14 13:44:30","39FD1C0341481BC4D47368AFCF821BC26A5F55979B7FA3921D00DD95DA3F5E43","# 幂和与高阶关联不变量的严格可分性策略 | 本文讨论如下问题：先用计算廉价的幂和恢复键值的无序多重集，再用尽可能低阶、尽可能短的关联不变量区分同一键值多重集内部不同的分子置换轨道。重点是给出可以证明的可分性条件，而不只是依靠随机采样观察描述符是否发生碰撞。 | ## 多项式次数与关联阶数"
+"False","True","G:\code\PublicRandomLittleThings\SFI\SFI.md","34036","2026/7/13 12:42:39","2026/7/14 13:01:48","446A2538005BEF9EEBCED4D468CC554BF1EBA513668782E20B6F85DD57CABD98","# 可分多项式势能面 | 置换不变量描述符是一类向神经网络势能面（potential energy surface, PES）中严格引入全同粒子置换对称性的技术。设一个含 $N$ 个原子的体系，其笛卡尔坐标为 | $$"

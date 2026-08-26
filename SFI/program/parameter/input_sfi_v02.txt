@@ -1,0 +1,40 @@
+// SFI_v02 example: first-order bond, angle, and dihedral FI recurrences.
+{
+    item = "SFI_v02";
+    DataFormat = "xyz";
+    DataFileName = "./data/data.xyz";
+    PIPFileName = "./data/CH4O_FI.txt";
+    AngleFileName = "./data/CH4O_aFI.txt";
+    DihedralFileName = "./data/CH4O_diFI.txt";
+    OutputFileName = "sfi_v02-och4";
+    threadCount = 4;
+
+    XYZsettings =
+    {
+        NeedPermutation = false;
+    };
+
+    SFI_v02 =
+    {
+        chunk_rows = 64;
+        bond_max_degree = 8;
+        angle_max_degree = 8;
+        dihedral_max_degree = 8;
+
+        // Dimensionless radial-map parameters.
+        m = 1.0;
+        a = 1.0;
+        b = 1.0;
+        c = 1.0;
+
+        // Output blocks follow this list exactly.
+        channels =
+        [
+            { geometry = "bond"; mapping = "rational"; basis = "chebyshev"; },
+            { geometry = "bond"; mapping = "morse"; basis = "legendre"; },
+            { geometry = "bond"; mapping = "gaussian"; basis = "chebyshev"; },
+            { geometry = "angle"; basis = "chebyshev"; },
+            { geometry = "dihedral"; basis = "legendre"; }
+        ];
+    };
+}

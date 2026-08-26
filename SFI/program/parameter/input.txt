@@ -1,0 +1,119 @@
+//=======================================================================================================
+/********************************************Notice*****************************************************/
+//Format of the parameter file:
+//         Keys should be in front of corresponding values within the same line, and  symbol ""  is crucial for a string.
+//         Keys are crucial too, don't change the former keys of the input values.
+//=======================================================================================================
+{
+	PIPFileName = "./data/CH4O_FI.txt";
+    DataFileName = "./data/data.xyz";
+	DataFormat = "xyz";
+	//DataFormat = "mat";
+	//DataFormat = "other";
+	OutputFileName = "sfi-och4";//Prefix is only needed
+	AngleFileName = "./data/CH4O_aFI.txt";
+	UsingAngle = true;
+	DihedralFileName = "./data/CH4O_diFI.txt";
+	UsingDihedral = true;
+
+    threadCount = 32;
+
+	FI =
+	{
+		PowerNormalization = true;
+	};
+
+	//item = "test";
+    //item = "dataswitch";
+	//item = "CodeGeneration";
+	//item = "cutoff";
+	item = "SFI";
+	//item = "XYZonly";
+
+	CodeGenSetting =
+	{
+		CcodePrint = true; 
+		//CcodePrint = false;
+    	FortranCodePrint = true;
+		//FortranCodePrint = false;
+	};
+    
+	CutoffSetting = 
+	{
+		threshold = "order";
+		//threshold = "workload";
+		order = 2;
+		workload = 1000;
+		CrossItem = true;
+	};
+
+	IfDataXYZ = true;
+
+	XYZsettings = 
+	{
+		OutToFile = false;
+		OutFileName = "bl-nopermu";//Prefix is only needed
+		NeedPermutation = false;
+		Permutation = [6, 2, 3, 4, 1, 5];
+		AtomCount = 6;
+		FISet =
+		{
+			label = ["H", "H", "O", "C"];//fi input file 
+			Normalization = "AtomRadii";
+			AtomRadii = [1.0, 1.0, 1.0];
+			BondParameter = [1.0, 1.0, 1.0];
+			BondType1 = ["H", "O", "P"];
+			BondType2 = ["C", "H", "H"];
+		};
+	};
+
+	SFI = 
+	{
+		//CcodePrint = true; 
+		CcodePrint = false;
+    	//FortranCodePrint = true;
+		FortranCodePrint = false;
+		DataSwitch = true;
+		//DataSwitch = false;
+		PowerNormalization = true;
+		//PowerNormalization = false;
+
+		order = 2;
+		settings = [
+			{
+				poly = 0;
+				reciprocal = 4;
+				exp = 2;
+				gaussian = 2;
+				cos = 0;
+				sin = 0;
+			},
+			{
+				poly = 0;
+				reciprocal = 2;
+				exp = 1;
+				gaussian = 1;
+				cos = 0;
+				sin = 0;
+			}
+		];
+		
+		orderA = 1;
+		settingsA = [
+			{
+				cos = 2;
+			}
+		];
+
+		orderD = 1;
+		settingsD = [
+			{
+				cos = 2;
+			}
+		];
+	};
+	TestItem = 
+	{
+		item = 3;
+	};
+}

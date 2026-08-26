@@ -1,0 +1,108 @@
+lexical:{
+	void:
+	{
+		idC: [a-z]|[A-Z]|_|[0-9];
+		num: [0-9];
+		hexa: [0-9]|[a-f]|[A-F];
+		octa: [0-7];
+		sign: ('-'|'+')?;
+	}
+	identifier: identifier(+1): ([a-z]|[A-Z]|_)<idC>*;
+	const:
+	{
+		 integer(+3): <sign><num>+;
+        // 
+        // 1. <num>+ '.' <num>*       -> (eg 1.23, 1.)
+        // 2. '.' <num>+              -> (eg .5, .23)
+        // 3. <num>+ (e|E)<integer>   -> (eg 3E5)
+        real(+1):  <sign> ( 
+                    ( <num>+ '.' <num>* | '.' <num>+ ) ((e|E)<integer>)? 
+                    | <num>+ (e|E)<integer> 
+                   );
+		CommonChar: '\''(
+			'\\'(     (<octa><octa>?<octa>?) | (x|X)<hexa><hexa>?
+				|     (v|t|r|n|f|b|a|'\\'|'?'|'\''|'\"'|['\0'])   
+				)
+			|([' '-'!']|['#'-'&']|['('-'/']|['0'-'[']|[']'-'~'])
+			)'\'';
+		//idChar: <idC>; 
+	};
+	format:
+	{
+		spaces: ' '+;
+		enters: ('\n'| '\r''\n')+;
+		tab: '\t';
+	}
+	division:
+	{
+		semicolon:';';
+		colon:':';
+		dot: '.';
+	}
+	braket:
+	{
+		braceL:'{';
+		braceR:'}';
+		left:'(';
+		right: ')';
+		squareL: '[';
+		squareR: ']';		
+		angleL: '<';
+		angleR: '>';
+	}
+	void:
+    {
+        AC:(['\0'-'\51']|['\53'-'\56']|['\60'-'\177']);
+    }
+    anntation:
+	{
+		anntationS: '/''/'(['\0'-'\11']|['\13'-'\177'])*;
+		anntationM: '/''*'('/'|<AC>|'*'+<AC>)*'*'+'/';
+	}
+	operation:
+	{
+		multi: '*';       
+		add: '+';       
+	}		
+	assign: assign: '=';
+};
+
+//after lexical analysis 'anntation' and 'format' unit will be discarded 
+
+grammar: FIS: {
+	FIS: {
+		single: FI;
+		multiple: FIS FI;
+		};
+	FI:
+	{
+		formula: Lvalue assign Rvalue;
+	}
+	TOKEN:
+	{
+		braket: identifier squareL integer squareR;
+		brace: identifier left integer right;
+	}
+	Lvalue: 
+	{
+		only: TOKEN;
+	};
+	Rvalue:
+	{
+		only: ITEMS;
+	}
+	ITEMS:
+	{
+		single: ITEM;
+		multiple: ITEMS add ITEM;
+	}
+	ITEM:
+	{
+		single: TOKEN;
+		multiple: ITEM multi TOKEN;
+	}
+
+
+
+};
+

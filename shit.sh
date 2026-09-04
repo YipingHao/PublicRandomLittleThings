@@ -8,9 +8,9 @@ if [ $# -eq 0 ]; then
     echo "示例：./git_commit.sh \"修复用户登录逻辑\""
     exit 1
 fi
-git add *
+#git add *
 # 执行带参数的 Git 提交
-git commit -m "$1"
+git commit -am "$1"
 #git push server
 git push
 #git push PublicServer

@@ -1,0 +1,19 @@
+{
+    generation = {
+        MoleculeLabel = ["O", "H", "H"];
+        AtomLabel = ["O", "H", "H"];
+        MoleculeOfAtom = [1, 2, 3];
+        Order = 5;
+        Bond = true;
+        Angle = false;
+        Dihedral = false;
+        SequencePriority = true;
+        UseDoubleLinearSolver = true;
+    };
+    PrintSetting = {
+        PrintSetting = "None";
+        FIfileNamePrefix = "water_n0_FI.txt";
+        NonFIfileNamePrefix = "water_n0_PIP.txt";
+        PIPprintSetting = "None";
+    };
+}

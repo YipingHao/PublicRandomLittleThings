@@ -1,0 +1,21 @@
+{
+    ElementCount = 2;
+    ElementLabel = ["O", "H"];
+    BlackCount = 0;
+    BlackList = [0, 0];
+    WhiteList = [1, 2];
+    OrderLimit = 5;
+    ComponentCountCutoff = [0, 0, 0, 0, 0];
+    WhiteTreeWidthCutoff = [0, 0, 0, 0, 0];
+    BlackTreeWidthCutoff = [0, 0, 0, 0, 0];
+    SystemPrefix = "water_n0_order5";
+    PrintMG = false;
+    PrintCMG = false;
+    PrintRawFormula = false;
+    PrintIR = false;
+    PrintSoA = false;
+    PrintAoS = false;
+    PrintCpp = false;
+    PrintJax = false;
+    PrintPyTorch = false;
+}

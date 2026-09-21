@@ -1,0 +1,20 @@
+{
+    generation = {
+        MoleculeLabel = ["A", "A", "B", "B", "B", "B", "B", "B", "B"];
+        AtomLabel = ["A", "A", "B", "B", "B", "B", "B", "B", "B"];
+        MoleculeOfAtom = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        Order = 7;
+        Bond = true;
+        Angle = false;
+        Dihedral = false;
+        SequencePriority = true;
+        UseDoubleLinearSolver = true;
+    };
+
+    PrintSetting = {
+        PrintSetting = "None";
+        FIfileNamePrefix = "A2B7_FI.txt";
+        NonFIfileNamePrefix = "A2B7_PIP.txt";
+        PIPprintSetting = "None";
+    };
+}

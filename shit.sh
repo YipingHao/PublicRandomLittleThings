@@ -11,7 +11,7 @@ fi
 #git add *
 # 执行带参数的 Git 提交
 git commit -am "$1"
-#git push server
+git push server
 git push
 #git push PublicServer
 

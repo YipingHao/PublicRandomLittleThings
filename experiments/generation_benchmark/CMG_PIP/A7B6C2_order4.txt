@@ -1,0 +1,21 @@
+{
+    ElementCount = 3;
+    ElementLabel = ["A", "B", "C"];
+    BlackCount = 0;
+    BlackList = [0, 0, 0];
+    WhiteList = [7, 6, 2];
+    OrderLimit = 4;
+    ComponentCountCutoff = [0, 0, 0, 0];
+    WhiteTreeWidthCutoff = [0, 0, 0, 0];
+    BlackTreeWidthCutoff = [0, 0, 0, 0];
+    SystemPrefix = "A7B6C2_order4";
+    PrintMG = false;
+    PrintCMG = false;
+    PrintRawFormula = false;
+    PrintIR = false;
+    PrintSoA = false;
+    PrintAoS = false;
+    PrintCpp = false;
+    PrintJax = false;
+    PrintPyTorch = false;
+}

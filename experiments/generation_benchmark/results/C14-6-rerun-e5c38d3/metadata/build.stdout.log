@@ -1,0 +1,60 @@
+rm ../obj/*.o
+rm ../exacutable/*.o
+rm ../libFI.a
+rm ../Pikaqiu.exe
+g++ -o ../obj/template.o -c -std=c++03 -O2  ../src/template.cpp
+g++ -o ../obj/dictionary.o -c -std=c++03 -O2  ../src/dictionary.cpp
+g++ -o ../obj/automata.o -c -std=c++03 -O2  ../src/automata.cpp
+g++ -o ../obj/FI_PIP.o -c -std=c++03 -O2  ../src/oldrefcode/FI_PIP.cpp
+g++ -o ../obj/FIgenerator.o -c -std=c++03 -O2  -I../src/ ../src/oldrefcode/FIgenerator.cpp
+g++ -o ../obj/polynomial.o -c -std=c++03 -O2  -I../src/ ../src/oldrefcode/polynomial.cpp
+g++ -o ../obj/console.o -c -std=c++03 -O2  -I../src/ ../src/oldrefcode/console.cpp
+g++ -o ../obj/PIPprinter.o -c -std=c++03 -O2  -I../src/ ../src/oldrefcode/PIPprinter.cpp
+g++ -o ../obj/exact_number.o -c -std=c++03 -O2  ../src/exact_number.cpp
+g++ -o ../obj/exact_matrix.o -c -std=c++03 -O2  ../src/exact_matrix.cpp
+g++ -o ../obj/exact_linear.o -c -std=c++03 -O2  -I../src/ ../src/oldrefcode/exact_linear.cpp
+g++ -o ../obj/multigraph.o -c -std=c++03 -O2  ../src/multigraph.cpp
+g++ -o ../obj/mgelimination.o -c -std=c++03 -O2  ../src/mgelimination.cpp
+g++ -o ../obj/cmgautomorphism.o -c -std=c++03 -O2  ../src/cmgautomorphism.cpp
+g++ -o ../obj/cmgpartition.o -c -std=c++03 -O2  ../src/cmgpartition.cpp
+g++ -o ../obj/cmgcontraction.o -c -std=c++03 -O2  ../src/cmgcontraction.cpp
+g++ -o ../obj/gir_lowering.o -c -std=c++03 -O2  ../src/gir_lowering.cpp
+g++ -o ../obj/simplegraph.o -c -std=c++03 -O2  ../src/simplegraph.cpp
+g++ -o ../obj/cmgderived.o -c -std=c++03 -O2  ../src/cmgderived.cpp
+g++ -o ../obj/cmgdag.o -c -std=c++03 -O2  ../src/cmgdag.cpp
+g++ -o ../obj/girdag.o -c -std=c++03 -O2  ../src/girdag.cpp
+g++ -o ../obj/numerate.o -c -std=c++03 -O2  ../src/numerate.cpp
+g++ -o ../obj/globallayout.o -c -std=c++03 -O2  ../src/globallayout.cpp
+g++ -o ../obj/graphprint.o -c -std=c++03 -O2  ../src/graphprint.cpp
+g++ -o ../obj/irprint.o -c -std=c++03 -O2  ../src/irprint.cpp
+g++ -o ../obj/rawformulaprint.o -c -std=c++03 -O2  ../src/rawformulaprint.cpp
+ar -rcv ../libFI.a ../obj/template.o ../obj/dictionary.o ../obj/automata.o ../obj/FI_PIP.o ../obj/FIgenerator.o ../obj/polynomial.o ../obj/console.o ../obj/PIPprinter.o ../obj/exact_number.o ../obj/exact_matrix.o ../obj/exact_linear.o ../obj/multigraph.o ../obj/mgelimination.o ../obj/cmgautomorphism.o ../obj/cmgpartition.o ../obj/cmgcontraction.o ../obj/gir_lowering.o ../obj/simplegraph.o ../obj/cmgderived.o ../obj/cmgdag.o ../obj/girdag.o ../obj/numerate.o ../obj/globallayout.o ../obj/graphprint.o ../obj/irprint.o ../obj/rawformulaprint.o
+a - ../obj/template.o
+a - ../obj/dictionary.o
+a - ../obj/automata.o
+a - ../obj/FI_PIP.o
+a - ../obj/FIgenerator.o
+a - ../obj/polynomial.o
+a - ../obj/console.o
+a - ../obj/PIPprinter.o
+a - ../obj/exact_number.o
+a - ../obj/exact_matrix.o
+a - ../obj/exact_linear.o
+a - ../obj/multigraph.o
+a - ../obj/mgelimination.o
+a - ../obj/cmgautomorphism.o
+a - ../obj/cmgpartition.o
+a - ../obj/cmgcontraction.o
+a - ../obj/gir_lowering.o
+a - ../obj/simplegraph.o
+a - ../obj/cmgderived.o
+a - ../obj/cmgdag.o
+a - ../obj/girdag.o
+a - ../obj/numerate.o
+a - ../obj/globallayout.o
+a - ../obj/graphprint.o
+a - ../obj/irprint.o
+a - ../obj/rawformulaprint.o
+g++ -o ../exacutable/main.o -c -std=c++03 -O2  ../exacutable/main.cpp
+g++ -o ../exacutable/input.o -c -std=c++03 -O2  ../exacutable/input.cpp
+g++ -o ../Pikaqiu.exe ../obj/template.o ../obj/dictionary.o ../obj/automata.o ../obj/FI_PIP.o ../obj/FIgenerator.o ../obj/polynomial.o ../obj/console.o ../obj/PIPprinter.o ../obj/exact_number.o ../obj/exact_matrix.o ../obj/exact_linear.o ../obj/multigraph.o ../obj/mgelimination.o ../obj/cmgautomorphism.o ../obj/cmgpartition.o ../obj/cmgcontraction.o ../obj/gir_lowering.o ../obj/simplegraph.o ../obj/cmgderived.o ../obj/cmgdag.o ../obj/girdag.o ../obj/numerate.o ../obj/globallayout.o ../obj/graphprint.o ../obj/irprint.o ../obj/rawformulaprint.o ../exacutable/main.o ../exacutable/input.o

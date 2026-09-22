@@ -1,0 +1,78 @@
+Program start time: 2026-09-22 19:35:29.266
+=== Dictionary contents ===
+{
+	ElementCount: 2;
+	ElementLabel: ["O",
+		"H"];
+	BlackCount: 0;
+	BlackList: [0, 0];
+	WhiteList: [8, 16];
+	OrderLimit: 5;
+	ComponentCountCutoff: [0, 0, 0, 0, 0];
+	WhiteTreeWidthCutoff: [0, 0, 0, 0, 0];
+	BlackTreeWidthCutoff: [0, 0, 0, 0, 0];
+	SystemPrefix: "water_n3_order5";
+	PrintMG: false;
+	PrintCMG: false;
+	PrintRawFormula: false;
+	PrintIR: false;
+	PrintSoA: false;
+	PrintAoS: false;
+	PrintCpp: false;
+	PrintJax: false;
+	PrintPyTorch: false;
+}
+=== End of dictionary ===
+
+
+================= Parameter contents =================
+=== CMG parameter (raw input) ===
+outputPath = /share/Hyper/experiments/generation_benchmark/rerun_e5c38d3_sparse/water/CMG_PIP/n3/output
+ElementCount = 2
+ElementLabel = ["O", "H"]
+BlackCount = 0
+BlackList = [0, 0]
+WhiteList = [8, 16]
+OrderLimit = 5
+ComponentCountCutoff = [0, 0, 0, 0, 0]
+WhiteTreeWidthCutoff = [0, 0, 0, 0, 0]
+BlackTreeWidthCutoff = [0, 0, 0, 0, 0]
+SystemPrefix = "water_n3_order5"
+PrintMG=false PrintCMG=false PrintRawFormula=false PrintIR=false
+PrintSoA=false PrintAoS=false
+PrintCpp=false PrintJax=false PrintPyTorch=false
+================ End of parameter ====================
+
+================= Check result =======================
+=== CMG parameter (checked) ===
+EffectiveComponentCountCutoff = [1, 2, 3, 4, 5]
+EffectiveWhiteTreeWidthCutoff = [1, 1, 2, 2, 2]
+EffectiveBlackTreeWidthCutoff = [1, 1, 2, 2, 2]
+BlackCount=0: global white-only mode.
+==================== End of check ====================
+
+Descriptor paradigm: global molecular
+
+================ MG enumeration ======================
+multiplicity 1: strategy=Initial generated=1 retained=1 max_components=1
+multiplicity 2: strategy=All generated=3 retained=3 max_components=2
+multiplicity 3: strategy=All generated=8 retained=8 max_components=3
+multiplicity 4: strategy=All generated=23 retained=23 max_components=4
+multiplicity 5: strategy=All generated=66 retained=66 max_components=5
+================ End of MG enumeration ===============
+
+================ CMG DAG construction ================
+multiplicity 1: MG=1 complete_colorings=3 DAG_nodes=3 DAG_edges=0 retained=3 white_path_width<=1 black_path_width<=1
+multiplicity 2: MG=3 complete_colorings=15 DAG_nodes=15 DAG_edges=13 retained=15 white_path_width<=1 black_path_width<=1
+multiplicity 3: MG=8 complete_colorings=70 DAG_nodes=70 DAG_edges=170 retained=70 white_path_width<=2 black_path_width<=2
+multiplicity 4: MG=23 complete_colorings=346 DAG_nodes=346 DAG_edges=2178 retained=346 white_path_width<=2 black_path_width<=2
+multiplicity 5: MG=66 complete_colorings=1746 DAG_nodes=1746 DAG_edges=27025 retained=1746 white_path_width<=2 black_path_width<=2
+================ End of CMG DAG construction =========
+
+================ Global layout =======================
+layout outputs: 2180
+================ End of global layout ================
+
+Global molecular layout is ready.
+Program end time: 2026-09-22 19:35:31.631
+Program elapsed time: (0 day, 0 h, 0 min, 2 s, 365 ms)

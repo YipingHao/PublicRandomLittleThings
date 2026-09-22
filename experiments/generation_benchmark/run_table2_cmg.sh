@@ -7,7 +7,7 @@ shift
 
 cmg_root=/share/Hyper/git/CMG_PIP
 input_root=/share/Hyper/git/PublicRandomLittleThings/experiments/generation_benchmark/CMG_PIP
-result_root=/share/Hyper/experiments/generation_benchmark
+result_root=${RESULT_ROOT:-/share/Hyper/experiments/generation_benchmark}
 
 export OMP_NUM_THREADS=1
 export OPENBLAS_NUM_THREADS=1

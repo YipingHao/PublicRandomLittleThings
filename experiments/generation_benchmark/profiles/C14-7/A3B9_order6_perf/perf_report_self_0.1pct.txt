@@ -1,0 +1,274 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 13K of event 'cycles:Pu'
+# Event count (approx.): 435179044817
+#
+# Overhead  Shared Object         Symbol                                                                                                                                                                                                                    IPC   [IPC Coverage]
+# ........  ....................  ........................................................................................................................................................................................................................  ....................
+#
+    25.28%  Pikaqiu.exe           [.] ExactNumber::BigInt::isZero() const                                                                                                                                                                                   -      -            
+            |
+            ---ExactNumber::BigInt::isZero() const
+               |          
+               |--24.97%--multigraph::GlobalLayout::Build(TemplateSelf::vector<multigraph::DAG> const&, TemplateSelf::vector<unsigned int> const&)
+               |          BuildGlobalLayoutAndPrintOutputs(parameter const&, TemplateSelf::vector<multigraph::DAG> const&, multigraph::GlobalLayout&, _IO_FILE*)
+               |          RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+               |          RunProgram(int, char**)
+               |          main
+               |          __libc_start_call_main
+               |          
+                --0.30%--multigraph::GlobalLayout::AppendForwardAndInverseTransforms(multigraph::DAG const&, unsigned int, TemplateSelf::vector<unsigned long> const&)
+                          multigraph::GlobalLayout::AppendOrder(multigraph::DAG const&, unsigned int, TemplateSelf::hash<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&)
+                          multigraph::GlobalLayout::Build(TemplateSelf::vector<multigraph::DAG> const&, TemplateSelf::vector<unsigned int> const&)
+                          BuildGlobalLayoutAndPrintOutputs(parameter const&, TemplateSelf::vector<multigraph::DAG> const&, multigraph::GlobalLayout&, _IO_FILE*)
+                          RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+                          RunProgram(int, char**)
+                          main
+                          __libc_start_call_main
+
+    24.71%  Pikaqiu.exe           [.] ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long) const                                                                                                                                             -      -            
+            |
+            ---ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long) const
+               |          
+               |--19.80%--multigraph::GlobalLayout::Validate() const
+               |          multigraph::GlobalLayout::Build(TemplateSelf::vector<multigraph::DAG> const&, TemplateSelf::vector<unsigned int> const&)
+               |          BuildGlobalLayoutAndPrintOutputs(parameter const&, TemplateSelf::vector<multigraph::DAG> const&, multigraph::GlobalLayout&, _IO_FILE*)
+               |          RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+               |          RunProgram(int, char**)
+               |          main
+               |          __libc_start_call_main
+               |          
+                --4.92%--multigraph::GlobalLayout::Build(TemplateSelf::vector<multigraph::DAG> const&, TemplateSelf::vector<unsigned int> const&)
+                          BuildGlobalLayoutAndPrintOutputs(parameter const&, TemplateSelf::vector<multigraph::DAG> const&, multigraph::GlobalLayout&, _IO_FILE*)
+                          RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+                          RunProgram(int, char**)
+                          main
+                          __libc_start_call_main
+
+    17.95%  Pikaqiu.exe           [.] ExactNumber::(anonymous namespace)::CheckedStorageSize(unsigned long, unsigned long, unsigned long)                                                                                                                   -      -            
+            |
+            ---ExactNumber::(anonymous namespace)::CheckedStorageSize(unsigned long, unsigned long, unsigned long)
+               |          
+               |--12.83%--ExactNumber::(anonymous namespace)::ValidateStorage(ExactNumber::BigIntMatrix const&)
+               |          |          
+               |          |--12.68%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long) const
+               |          |          multigraph::GlobalLayout::Validate() const
+               |          |          multigraph::GlobalLayout::Build(TemplateSelf::vector<multigraph::DAG> const&, TemplateSelf::vector<unsigned int> const&)
+               |          |          BuildGlobalLayoutAndPrintOutputs(parameter const&, TemplateSelf::vector<multigraph::DAG> const&, multigraph::GlobalLayout&, _IO_FILE*)
+               |          |          RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+               |          |          RunProgram(int, char**)
+               |          |          main
+               |          |          __libc_start_call_main
+               |          |          
+               |           --0.15%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long)
+               |                     ExactNumber::BigIntMatrix::InvertUnitLowerTriangular(ExactNumber::BigIntMatrix const&)
+               |                     multigraph::GlobalLayout::AppendForwardAndInverseTransforms(multigraph::DAG const&, unsigned int, TemplateSelf::vector<unsigned long> const&)
+               |                     multigraph::GlobalLayout::AppendOrder(multigraph::DAG const&, unsigned int, TemplateSelf::hash<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&)
+               |                     multigraph::GlobalLayout::Build(TemplateSelf::vector<multigraph::DAG> const&, TemplateSelf::vector<unsigned int> const&)
+               |                     BuildGlobalLayoutAndPrintOutputs(parameter const&, TemplateSelf::vector<multigraph::DAG> const&, multigraph::GlobalLayout&, _IO_FILE*)
+               |                     RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+               |                     RunProgram(int, char**)
+               |                     main
+               |                     __libc_start_call_main
+               |          
+                --5.06%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long) const
+                          multigraph::GlobalLayout::Validate() const
+                          multigraph::GlobalLayout::Build(TemplateSelf::vector<multigraph::DAG> const&, TemplateSelf::vector<unsigned int> const&)
+                          BuildGlobalLayoutAndPrintOutputs(parameter const&, TemplateSelf::vector<multigraph::DAG> const&, multigraph::GlobalLayout&, _IO_FILE*)
+                          RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+                          RunProgram(int, char**)
+                          main
+                          __libc_start_call_main
+
+    13.21%  Pikaqiu.exe           [.] multigraph::GlobalLayout::Validate() const                                                                                                                                                                            -      -            
+            |
+            ---multigraph::GlobalLayout::Validate() const
+               multigraph::GlobalLayout::Build(TemplateSelf::vector<multigraph::DAG> const&, TemplateSelf::vector<unsigned int> const&)
+               BuildGlobalLayoutAndPrintOutputs(parameter const&, TemplateSelf::vector<multigraph::DAG> const&, multigraph::GlobalLayout&, _IO_FILE*)
+               RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+               RunProgram(int, char**)
+               main
+               __libc_start_call_main
+
+     9.84%  Pikaqiu.exe           [.] ExactNumber::(anonymous namespace)::ValidateStorage(ExactNumber::BigIntMatrix const&)                                                                                                                                 -      -            
+            |
+            ---ExactNumber::(anonymous namespace)::ValidateStorage(ExactNumber::BigIntMatrix const&)
+               |          
+                --9.69%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long) const
+                          multigraph::GlobalLayout::Validate() const
+                          multigraph::GlobalLayout::Build(TemplateSelf::vector<multigraph::DAG> const&, TemplateSelf::vector<unsigned int> const&)
+                          BuildGlobalLayoutAndPrintOutputs(parameter const&, TemplateSelf::vector<multigraph::DAG> const&, multigraph::GlobalLayout&, _IO_FILE*)
+                          RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+                          RunProgram(int, char**)
+                          main
+                          __libc_start_call_main
+
+     1.20%  libc.so.6             [.] _int_free                                                                                                                                                                                                             -      -            
+            |
+            ---_int_free
+               |          
+                --0.82%--0x1
+
+     0.85%  libc.so.6             [.] malloc                                                                                                                                                                                                                -      -            
+            |
+            ---malloc
+
+     0.76%  libc.so.6             [.] _int_malloc                                                                                                                                                                                                           -      -            
+            |
+            ---_int_malloc
+               |          
+                --0.29%--0x1
+
+     0.60%  Pikaqiu.exe           [.] multigraph::MGadjacentMat::CanonicalFormCore(TemplateSelf::vector<unsigned int> const&, TemplateSelf::vector<unsigned int>&) const                                                                                    -      -            
+            |
+            ---multigraph::MGadjacentMat::CanonicalFormCore(TemplateSelf::vector<unsigned int> const&, TemplateSelf::vector<unsigned int>&) const
+               |          
+                --0.59%--multigraph::CMGadjacentMat::CanonicalForm()
+                          |          
+                           --0.48%--multigraph::CMGadjacentMat::QuotientByPartition(multigraph::VertexPartition const&, multigraph::CMGadjacentMat&) const
+                                     multigraph::CMGadjacentMat::EnumerateCanonicalQuotients(TemplateSelf::vector<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&) const
+                                     multigraph::DAG::BuildSubroutine02ExpandProperQuotientClosure(TemplateSelf::hash<multigraph::CMGadjacentMat>&)
+                                     multigraph::DAG::Build(TemplateSelf::vector<multigraph::CMGDerivedColorings> const&)
+                                     BuildColouredDAGs(parameter const&, multigraph::MG_enumeration const&, TemplateSelf::vector<multigraph::DAG>&, _IO_FILE*)
+                                     RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+                                     RunProgram(int, char**)
+                                     main
+                                     __libc_start_call_main
+
+     0.56%  libc.so.6             [.] cfree@GLIBC_2.2.5                                                                                                                                                                                                     -      -            
+            |
+            ---cfree@GLIBC_2.2.5
+
+     0.46%  Pikaqiu.exe           [.] multigraph::(anonymous namespace)::CompareUintVec(TemplateSelf::vector<unsigned int> const&, TemplateSelf::vector<unsigned int> const&)                                                                               -      -            
+            |
+            ---multigraph::(anonymous namespace)::CompareUintVec(TemplateSelf::vector<unsigned int> const&, TemplateSelf::vector<unsigned int> const&)
+               |          
+                --0.33%--multigraph::CMGadjacentMat::QuotientByPartition(multigraph::VertexPartition const&, multigraph::CMGadjacentMat&) const
+                          multigraph::CMGadjacentMat::EnumerateCanonicalQuotients(TemplateSelf::vector<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&) const
+                          multigraph::DAG::BuildSubroutine02ExpandProperQuotientClosure(TemplateSelf::hash<multigraph::CMGadjacentMat>&)
+                          multigraph::DAG::Build(TemplateSelf::vector<multigraph::CMGDerivedColorings> const&)
+                          BuildColouredDAGs(parameter const&, multigraph::MG_enumeration const&, TemplateSelf::vector<multigraph::DAG>&, _IO_FILE*)
+                          RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+                          RunProgram(int, char**)
+                          main
+                          __libc_start_call_main
+
+     0.41%  Pikaqiu.exe           [.] multigraph::MGadjacentMat::InnerComputing02InnerColoring()                                                                                                                                                            -      -            
+            |
+            ---multigraph::MGadjacentMat::InnerComputing02InnerColoring()
+               multigraph::CMGadjacentMat::QuotientByPartition(multigraph::VertexPartition const&, multigraph::CMGadjacentMat&) const
+               multigraph::CMGadjacentMat::EnumerateCanonicalQuotients(TemplateSelf::vector<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&) const
+               multigraph::DAG::BuildSubroutine02ExpandProperQuotientClosure(TemplateSelf::hash<multigraph::CMGadjacentMat>&)
+               multigraph::DAG::Build(TemplateSelf::vector<multigraph::CMGDerivedColorings> const&)
+               BuildColouredDAGs(parameter const&, multigraph::MG_enumeration const&, TemplateSelf::vector<multigraph::DAG>&, _IO_FILE*)
+               RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+               RunProgram(int, char**)
+               main
+               __libc_start_call_main
+
+     0.34%  Pikaqiu.exe           [.] ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long)                                                                                                                                                   -      -            
+            |
+            ---ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long)
+               |          
+                --0.29%--ExactNumber::BigIntMatrix::InvertUnitLowerTriangular(ExactNumber::BigIntMatrix const&)
+                          multigraph::GlobalLayout::AppendForwardAndInverseTransforms(multigraph::DAG const&, unsigned int, TemplateSelf::vector<unsigned long> const&)
+                          multigraph::GlobalLayout::AppendOrder(multigraph::DAG const&, unsigned int, TemplateSelf::hash<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&)
+                          multigraph::GlobalLayout::Build(TemplateSelf::vector<multigraph::DAG> const&, TemplateSelf::vector<unsigned int> const&)
+                          BuildGlobalLayoutAndPrintOutputs(parameter const&, TemplateSelf::vector<multigraph::DAG> const&, multigraph::GlobalLayout&, _IO_FILE*)
+                          RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+                          RunProgram(int, char**)
+                          main
+                          __libc_start_call_main
+
+     0.31%  Pikaqiu.exe           [.] multigraph::CMGadjacentMat::ComputeMixedColor()                                                                                                                                                                       -      -            
+            |
+            ---multigraph::CMGadjacentMat::ComputeMixedColor()
+               multigraph::CMGadjacentMat::QuotientByPartition(multigraph::VertexPartition const&, multigraph::CMGadjacentMat&) const
+               multigraph::CMGadjacentMat::EnumerateCanonicalQuotients(TemplateSelf::vector<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&) const
+               multigraph::DAG::BuildSubroutine02ExpandProperQuotientClosure(TemplateSelf::hash<multigraph::CMGadjacentMat>&)
+               multigraph::DAG::Build(TemplateSelf::vector<multigraph::CMGDerivedColorings> const&)
+               BuildColouredDAGs(parameter const&, multigraph::MG_enumeration const&, TemplateSelf::vector<multigraph::DAG>&, _IO_FILE*)
+               RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+               RunProgram(int, char**)
+               main
+               __libc_start_call_main
+
+     0.22%  Pikaqiu.exe           [.] multigraph::CMGadjacentMat::QuotientByPartition(multigraph::VertexPartition const&, multigraph::CMGadjacentMat&) const                                                                                                -      -            
+            |
+            ---multigraph::CMGadjacentMat::QuotientByPartition(multigraph::VertexPartition const&, multigraph::CMGadjacentMat&) const
+               multigraph::CMGadjacentMat::EnumerateCanonicalQuotients(TemplateSelf::vector<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&) const
+               multigraph::DAG::BuildSubroutine02ExpandProperQuotientClosure(TemplateSelf::hash<multigraph::CMGadjacentMat>&)
+               multigraph::DAG::Build(TemplateSelf::vector<multigraph::CMGDerivedColorings> const&)
+               BuildColouredDAGs(parameter const&, multigraph::MG_enumeration const&, TemplateSelf::vector<multigraph::DAG>&, _IO_FILE*)
+               RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+               RunProgram(int, char**)
+               main
+               __libc_start_call_main
+
+     0.20%  libc.so.6             [.] __libc_calloc                                                                                                                                                                                                         -      -            
+            |
+            ---__libc_calloc
+               |          
+                --0.12%--0x1
+
+     0.18%  Pikaqiu.exe           [.] ExactNumber::BigIntMatrix::InvertUnitLowerTriangular(ExactNumber::BigIntMatrix const&)                                                                                                                                -      -            
+            |
+            ---ExactNumber::BigIntMatrix::InvertUnitLowerTriangular(ExactNumber::BigIntMatrix const&)
+               multigraph::GlobalLayout::AppendForwardAndInverseTransforms(multigraph::DAG const&, unsigned int, TemplateSelf::vector<unsigned long> const&)
+               multigraph::GlobalLayout::AppendOrder(multigraph::DAG const&, unsigned int, TemplateSelf::hash<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&)
+               multigraph::GlobalLayout::Build(TemplateSelf::vector<multigraph::DAG> const&, TemplateSelf::vector<unsigned int> const&)
+               BuildGlobalLayoutAndPrintOutputs(parameter const&, TemplateSelf::vector<multigraph::DAG> const&, multigraph::GlobalLayout&, _IO_FILE*)
+               RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+               RunProgram(int, char**)
+               main
+               __libc_start_call_main
+
+     0.17%  Pikaqiu.exe           [.] multigraph::MGadjacentMat::Permutation(TemplateSelf::vector<unsigned int> const&)                                                                                                                                     -      -            
+            |
+            ---multigraph::MGadjacentMat::Permutation(TemplateSelf::vector<unsigned int> const&)
+               multigraph::CMGadjacentMat::ApplyPermutation(TemplateSelf::vector<unsigned int> const&)
+
+     0.17%  libc.so.6             [.] malloc_consolidate                                                                                                                                                                                                    -      -            
+            |
+            ---malloc_consolidate
+
+     0.14%  Pikaqiu.exe           [.] multigraph::MGadjacentMat::InnerComputing03InnerColoringbyComponet()                                                                                                                                                  -      -            
+            |
+            ---multigraph::MGadjacentMat::InnerComputing03InnerColoringbyComponet()
+               |          
+                --0.13%--multigraph::CMGadjacentMat::QuotientByPartition(multigraph::VertexPartition const&, multigraph::CMGadjacentMat&) const
+                          multigraph::CMGadjacentMat::EnumerateCanonicalQuotients(TemplateSelf::vector<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&) const
+                          multigraph::DAG::BuildSubroutine02ExpandProperQuotientClosure(TemplateSelf::hash<multigraph::CMGadjacentMat>&)
+                          multigraph::DAG::Build(TemplateSelf::vector<multigraph::CMGDerivedColorings> const&)
+                          BuildColouredDAGs(parameter const&, multigraph::MG_enumeration const&, TemplateSelf::vector<multigraph::DAG>&, _IO_FILE*)
+                          RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+                          RunProgram(int, char**)
+                          main
+                          __libc_start_call_main
+
+     0.14%  Pikaqiu.exe           [.] multigraph::MGadjacentMat::InnerComputing01ConnectedComponents()                                                                                                                                                      -      -            
+            |
+            ---multigraph::MGadjacentMat::InnerComputing01ConnectedComponents()
+
+     0.13%  libc.so.6             [.] realloc                                                                                                                                                                                                               -      -            
+            |
+            ---realloc
+
+     0.12%  Pikaqiu.exe           [.] multigraph::CMGadjacentMat::ValidateColoring() const                                                                                                                                                                  -      -            
+            |
+            ---multigraph::CMGadjacentMat::ValidateColoring() const
+
+     0.11%  Pikaqiu.exe           [.] multigraph::(anonymous namespace)::PermuteUintVec(TemplateSelf::vector<unsigned int>&, TemplateSelf::vector<unsigned int> const&)                                                                                     -      -            
+            |
+            ---multigraph::(anonymous namespace)::PermuteUintVec(TemplateSelf::vector<unsigned int>&, TemplateSelf::vector<unsigned int> const&)
+               multigraph::MGadjacentMat::Permutation(TemplateSelf::vector<unsigned int> const&)
+               multigraph::CMGadjacentMat::ApplyPermutation(TemplateSelf::vector<unsigned int> const&)
+
+
+
+#
+# (Tip: To see callchains in a more compact form: perf report -g folded)
+#

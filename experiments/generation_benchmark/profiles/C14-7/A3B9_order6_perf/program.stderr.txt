@@ -1,0 +1,2 @@
+[ perf record: Woken up 6 times to write data ]
+[ perf record: Captured and wrote 1.513 MB /share/Hyper/experiments/generation_benchmark/profiles/C14-7/A3B9_order6_perf/perf.data (13273 samples) ]

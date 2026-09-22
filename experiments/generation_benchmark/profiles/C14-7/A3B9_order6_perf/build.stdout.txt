@@ -1,0 +1,31 @@
+make: Entering directory '/share/Hyper/profile/CMG_PIP_perf_A3B9_20260922/tools'
+g++ -o ../obj/template.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 ../src/template.cpp
+g++ -o ../obj/dictionary.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 ../src/dictionary.cpp
+g++ -o ../obj/automata.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 ../src/automata.cpp
+g++ -o ../obj/FI_PIP.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 ../src/oldrefcode/FI_PIP.cpp
+g++ -o ../obj/FIgenerator.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 -I../src/ ../src/oldrefcode/FIgenerator.cpp
+g++ -o ../obj/polynomial.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 -I../src/ ../src/oldrefcode/polynomial.cpp
+g++ -o ../obj/console.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 -I../src/ ../src/oldrefcode/console.cpp
+g++ -o ../obj/PIPprinter.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 -I../src/ ../src/oldrefcode/PIPprinter.cpp
+g++ -o ../obj/exact_number.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 ../src/exact_number.cpp
+g++ -o ../obj/exact_matrix.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 ../src/exact_matrix.cpp
+g++ -o ../obj/exact_linear.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 -I../src/ ../src/oldrefcode/exact_linear.cpp
+g++ -o ../obj/multigraph.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 ../src/multigraph.cpp
+g++ -o ../obj/mgelimination.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 ../src/mgelimination.cpp
+g++ -o ../obj/cmgautomorphism.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 ../src/cmgautomorphism.cpp
+g++ -o ../obj/cmgpartition.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 ../src/cmgpartition.cpp
+g++ -o ../obj/cmgcontraction.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 ../src/cmgcontraction.cpp
+g++ -o ../obj/gir_lowering.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 ../src/gir_lowering.cpp
+g++ -o ../obj/simplegraph.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 ../src/simplegraph.cpp
+g++ -o ../obj/cmgderived.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 ../src/cmgderived.cpp
+g++ -o ../obj/cmgdag.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 ../src/cmgdag.cpp
+g++ -o ../obj/girdag.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 ../src/girdag.cpp
+g++ -o ../obj/numerate.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 ../src/numerate.cpp
+g++ -o ../obj/globallayout.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 ../src/globallayout.cpp
+g++ -o ../obj/graphprint.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 ../src/graphprint.cpp
+g++ -o ../obj/irprint.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 ../src/irprint.cpp
+g++ -o ../obj/rawformulaprint.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 ../src/rawformulaprint.cpp
+g++ -o ../exacutable/main.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 ../exacutable/main.cpp
+g++ -o ../exacutable/input.o -c -O2 -g -fno-omit-frame-pointer -std=c++11 ../exacutable/input.cpp
+g++ -o ../Pikaqiu.exe ../obj/template.o ../obj/dictionary.o ../obj/automata.o ../obj/FI_PIP.o ../obj/FIgenerator.o ../obj/polynomial.o ../obj/console.o ../obj/PIPprinter.o ../obj/exact_number.o ../obj/exact_matrix.o ../obj/exact_linear.o ../obj/multigraph.o ../obj/mgelimination.o ../obj/cmgautomorphism.o ../obj/cmgpartition.o ../obj/cmgcontraction.o ../obj/gir_lowering.o ../obj/simplegraph.o ../obj/cmgderived.o ../obj/cmgdag.o ../obj/girdag.o ../obj/numerate.o ../obj/globallayout.o ../obj/graphprint.o ../obj/irprint.o ../obj/rawformulaprint.o ../exacutable/main.o ../exacutable/input.o
+make: Leaving directory '/share/Hyper/profile/CMG_PIP_perf_A3B9_20260922/tools'

@@ -1,0 +1,705 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 13K of event 'cycles:Pu'
+# Event count (approx.): 435179044817
+#
+# Children      Self  Command      Shared Object         Symbol                                                                                                                                                                                                                                                                                                                   IPC   [IPC Coverage]
+# ........  ........  ...........  ....................  .......................................................................................................................................................................................................................................................................................................................  ....................
+#
+    96.45%     0.00%  Pikaqiu.exe  libc.so.6             [.] __libc_start_call_main                                                                                                                                                                                                                                                                                               -      -            
+            |
+            ---__libc_start_call_main
+               main
+               RunProgram(int, char**)
+               RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+               |          
+               |--92.13%--BuildGlobalLayoutAndPrintOutputs(parameter const&, TemplateSelf::vector<multigraph::DAG> const&, multigraph::GlobalLayout&, _IO_FILE*)
+               |          multigraph::GlobalLayout::Build(TemplateSelf::vector<multigraph::DAG> const&, TemplateSelf::vector<unsigned int> const&)
+               |          |          
+               |          |--60.68%--multigraph::GlobalLayout::Validate() const
+               |          |          |          
+               |          |           --47.25%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long) const
+               |          |                     |          
+               |          |                     |--22.39%--ExactNumber::(anonymous namespace)::ValidateStorage(ExactNumber::BigIntMatrix const&)
+               |          |                     |          |          
+               |          |                     |           --12.70%--ExactNumber::(anonymous namespace)::CheckedStorageSize(unsigned long, unsigned long, unsigned long)
+               |          |                     |          
+               |          |                      --5.06%--ExactNumber::(anonymous namespace)::CheckedStorageSize(unsigned long, unsigned long, unsigned long)
+               |          |          
+               |          |--25.01%--ExactNumber::BigInt::isZero() const
+               |          |          
+               |          |--4.92%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long) const
+               |          |          
+               |           --1.30%--multigraph::GlobalLayout::AppendOrder(multigraph::DAG const&, unsigned int, TemplateSelf::hash<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&)
+               |                     |          
+               |                      --1.29%--multigraph::GlobalLayout::AppendForwardAndInverseTransforms(multigraph::DAG const&, unsigned int, TemplateSelf::vector<unsigned long> const&)
+               |                                |          
+               |                                 --0.88%--ExactNumber::BigIntMatrix::InvertUnitLowerTriangular(ExactNumber::BigIntMatrix const&)
+               |                                           |          
+               |                                            --0.59%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long)
+               |          
+                --4.23%--BuildColouredDAGs(parameter const&, multigraph::MG_enumeration const&, TemplateSelf::vector<multigraph::DAG>&, _IO_FILE*)
+                          |          
+                           --4.19%--multigraph::DAG::Build(TemplateSelf::vector<multigraph::CMGDerivedColorings> const&)
+                                     |          
+                                      --4.14%--multigraph::DAG::BuildSubroutine02ExpandProperQuotientClosure(TemplateSelf::hash<multigraph::CMGadjacentMat>&)
+                                                |          
+                                                 --3.88%--multigraph::CMGadjacentMat::EnumerateCanonicalQuotients(TemplateSelf::vector<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&) const
+                                                           |          
+                                                            --3.46%--multigraph::CMGadjacentMat::QuotientByPartition(multigraph::VertexPartition const&, multigraph::CMGadjacentMat&) const
+                                                                      |          
+                                                                      |--0.94%--multigraph::CMGadjacentMat::CanonicalForm()
+                                                                      |          |          
+                                                                      |           --0.62%--multigraph::MGadjacentMat::CanonicalFormCore(TemplateSelf::vector<unsigned int> const&, TemplateSelf::vector<unsigned int>&) const
+                                                                      |          
+                                                                       --0.60%--multigraph::MGadjacentMat::InnerComputing02InnerColoring()
+
+    96.45%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] main                                                                                                                                                                                                                                                                                                                 -      -            
+            |
+            ---main
+               RunProgram(int, char**)
+               RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+               |          
+               |--92.13%--BuildGlobalLayoutAndPrintOutputs(parameter const&, TemplateSelf::vector<multigraph::DAG> const&, multigraph::GlobalLayout&, _IO_FILE*)
+               |          multigraph::GlobalLayout::Build(TemplateSelf::vector<multigraph::DAG> const&, TemplateSelf::vector<unsigned int> const&)
+               |          |          
+               |          |--60.68%--multigraph::GlobalLayout::Validate() const
+               |          |          |          
+               |          |           --47.25%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long) const
+               |          |                     |          
+               |          |                     |--22.39%--ExactNumber::(anonymous namespace)::ValidateStorage(ExactNumber::BigIntMatrix const&)
+               |          |                     |          |          
+               |          |                     |           --12.70%--ExactNumber::(anonymous namespace)::CheckedStorageSize(unsigned long, unsigned long, unsigned long)
+               |          |                     |          
+               |          |                      --5.06%--ExactNumber::(anonymous namespace)::CheckedStorageSize(unsigned long, unsigned long, unsigned long)
+               |          |          
+               |          |--25.01%--ExactNumber::BigInt::isZero() const
+               |          |          
+               |          |--4.92%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long) const
+               |          |          
+               |           --1.30%--multigraph::GlobalLayout::AppendOrder(multigraph::DAG const&, unsigned int, TemplateSelf::hash<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&)
+               |                     |          
+               |                      --1.29%--multigraph::GlobalLayout::AppendForwardAndInverseTransforms(multigraph::DAG const&, unsigned int, TemplateSelf::vector<unsigned long> const&)
+               |                                |          
+               |                                 --0.88%--ExactNumber::BigIntMatrix::InvertUnitLowerTriangular(ExactNumber::BigIntMatrix const&)
+               |                                           |          
+               |                                            --0.59%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long)
+               |          
+                --4.23%--BuildColouredDAGs(parameter const&, multigraph::MG_enumeration const&, TemplateSelf::vector<multigraph::DAG>&, _IO_FILE*)
+                          |          
+                           --4.19%--multigraph::DAG::Build(TemplateSelf::vector<multigraph::CMGDerivedColorings> const&)
+                                     |          
+                                      --4.14%--multigraph::DAG::BuildSubroutine02ExpandProperQuotientClosure(TemplateSelf::hash<multigraph::CMGadjacentMat>&)
+                                                |          
+                                                 --3.88%--multigraph::CMGadjacentMat::EnumerateCanonicalQuotients(TemplateSelf::vector<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&) const
+                                                           |          
+                                                            --3.46%--multigraph::CMGadjacentMat::QuotientByPartition(multigraph::VertexPartition const&, multigraph::CMGadjacentMat&) const
+                                                                      |          
+                                                                      |--0.94%--multigraph::CMGadjacentMat::CanonicalForm()
+                                                                      |          |          
+                                                                      |           --0.62%--multigraph::MGadjacentMat::CanonicalFormCore(TemplateSelf::vector<unsigned int> const&, TemplateSelf::vector<unsigned int>&) const
+                                                                      |          
+                                                                       --0.60%--multigraph::MGadjacentMat::InnerComputing02InnerColoring()
+
+    96.45%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] RunProgram(int, char**)                                                                                                                                                                                                                                                                                              -      -            
+            |
+            ---RunProgram(int, char**)
+               RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+               |          
+               |--92.13%--BuildGlobalLayoutAndPrintOutputs(parameter const&, TemplateSelf::vector<multigraph::DAG> const&, multigraph::GlobalLayout&, _IO_FILE*)
+               |          multigraph::GlobalLayout::Build(TemplateSelf::vector<multigraph::DAG> const&, TemplateSelf::vector<unsigned int> const&)
+               |          |          
+               |          |--60.68%--multigraph::GlobalLayout::Validate() const
+               |          |          |          
+               |          |           --47.25%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long) const
+               |          |                     |          
+               |          |                     |--22.39%--ExactNumber::(anonymous namespace)::ValidateStorage(ExactNumber::BigIntMatrix const&)
+               |          |                     |          |          
+               |          |                     |           --12.70%--ExactNumber::(anonymous namespace)::CheckedStorageSize(unsigned long, unsigned long, unsigned long)
+               |          |                     |          
+               |          |                      --5.06%--ExactNumber::(anonymous namespace)::CheckedStorageSize(unsigned long, unsigned long, unsigned long)
+               |          |          
+               |          |--25.01%--ExactNumber::BigInt::isZero() const
+               |          |          
+               |          |--4.92%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long) const
+               |          |          
+               |           --1.30%--multigraph::GlobalLayout::AppendOrder(multigraph::DAG const&, unsigned int, TemplateSelf::hash<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&)
+               |                     |          
+               |                      --1.29%--multigraph::GlobalLayout::AppendForwardAndInverseTransforms(multigraph::DAG const&, unsigned int, TemplateSelf::vector<unsigned long> const&)
+               |                                |          
+               |                                 --0.88%--ExactNumber::BigIntMatrix::InvertUnitLowerTriangular(ExactNumber::BigIntMatrix const&)
+               |                                           |          
+               |                                            --0.59%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long)
+               |          
+                --4.23%--BuildColouredDAGs(parameter const&, multigraph::MG_enumeration const&, TemplateSelf::vector<multigraph::DAG>&, _IO_FILE*)
+                          |          
+                           --4.19%--multigraph::DAG::Build(TemplateSelf::vector<multigraph::CMGDerivedColorings> const&)
+                                     |          
+                                      --4.14%--multigraph::DAG::BuildSubroutine02ExpandProperQuotientClosure(TemplateSelf::hash<multigraph::CMGadjacentMat>&)
+                                                |          
+                                                 --3.88%--multigraph::CMGadjacentMat::EnumerateCanonicalQuotients(TemplateSelf::vector<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&) const
+                                                           |          
+                                                            --3.46%--multigraph::CMGadjacentMat::QuotientByPartition(multigraph::VertexPartition const&, multigraph::CMGadjacentMat&) const
+                                                                      |          
+                                                                      |--0.94%--multigraph::CMGadjacentMat::CanonicalForm()
+                                                                      |          |          
+                                                                      |           --0.62%--multigraph::MGadjacentMat::CanonicalFormCore(TemplateSelf::vector<unsigned int> const&, TemplateSelf::vector<unsigned int>&) const
+                                                                      |          
+                                                                       --0.60%--multigraph::MGadjacentMat::InnerComputing02InnerColoring()
+
+    96.45%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] RunGlobalMolecularTask(parameter const&, _IO_FILE*)                                                                                                                                                                                                                                                                  -      -            
+            |
+            ---RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+               |          
+               |--92.13%--BuildGlobalLayoutAndPrintOutputs(parameter const&, TemplateSelf::vector<multigraph::DAG> const&, multigraph::GlobalLayout&, _IO_FILE*)
+               |          multigraph::GlobalLayout::Build(TemplateSelf::vector<multigraph::DAG> const&, TemplateSelf::vector<unsigned int> const&)
+               |          |          
+               |          |--60.68%--multigraph::GlobalLayout::Validate() const
+               |          |          |          
+               |          |           --47.25%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long) const
+               |          |                     |          
+               |          |                     |--22.39%--ExactNumber::(anonymous namespace)::ValidateStorage(ExactNumber::BigIntMatrix const&)
+               |          |                     |          |          
+               |          |                     |           --12.70%--ExactNumber::(anonymous namespace)::CheckedStorageSize(unsigned long, unsigned long, unsigned long)
+               |          |                     |          
+               |          |                      --5.06%--ExactNumber::(anonymous namespace)::CheckedStorageSize(unsigned long, unsigned long, unsigned long)
+               |          |          
+               |          |--25.01%--ExactNumber::BigInt::isZero() const
+               |          |          
+               |          |--4.92%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long) const
+               |          |          
+               |           --1.30%--multigraph::GlobalLayout::AppendOrder(multigraph::DAG const&, unsigned int, TemplateSelf::hash<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&)
+               |                     |          
+               |                      --1.29%--multigraph::GlobalLayout::AppendForwardAndInverseTransforms(multigraph::DAG const&, unsigned int, TemplateSelf::vector<unsigned long> const&)
+               |                                |          
+               |                                 --0.88%--ExactNumber::BigIntMatrix::InvertUnitLowerTriangular(ExactNumber::BigIntMatrix const&)
+               |                                           |          
+               |                                            --0.59%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long)
+               |          
+                --4.23%--BuildColouredDAGs(parameter const&, multigraph::MG_enumeration const&, TemplateSelf::vector<multigraph::DAG>&, _IO_FILE*)
+                          |          
+                           --4.19%--multigraph::DAG::Build(TemplateSelf::vector<multigraph::CMGDerivedColorings> const&)
+                                     |          
+                                      --4.14%--multigraph::DAG::BuildSubroutine02ExpandProperQuotientClosure(TemplateSelf::hash<multigraph::CMGadjacentMat>&)
+                                                |          
+                                                 --3.88%--multigraph::CMGadjacentMat::EnumerateCanonicalQuotients(TemplateSelf::vector<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&) const
+                                                           |          
+                                                            --3.46%--multigraph::CMGadjacentMat::QuotientByPartition(multigraph::VertexPartition const&, multigraph::CMGadjacentMat&) const
+                                                                      |          
+                                                                      |--0.94%--multigraph::CMGadjacentMat::CanonicalForm()
+                                                                      |          |          
+                                                                      |           --0.62%--multigraph::MGadjacentMat::CanonicalFormCore(TemplateSelf::vector<unsigned int> const&, TemplateSelf::vector<unsigned int>&) const
+                                                                      |          
+                                                                       --0.60%--multigraph::MGadjacentMat::InnerComputing02InnerColoring()
+
+    92.13%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] BuildGlobalLayoutAndPrintOutputs(parameter const&, TemplateSelf::vector<multigraph::DAG> const&, multigraph::GlobalLayout&, _IO_FILE*)                                                                                                                                                                               -      -            
+            |
+            ---BuildGlobalLayoutAndPrintOutputs(parameter const&, TemplateSelf::vector<multigraph::DAG> const&, multigraph::GlobalLayout&, _IO_FILE*)
+               multigraph::GlobalLayout::Build(TemplateSelf::vector<multigraph::DAG> const&, TemplateSelf::vector<unsigned int> const&)
+               |          
+               |--60.68%--multigraph::GlobalLayout::Validate() const
+               |          |          
+               |           --47.25%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long) const
+               |                     |          
+               |                     |--22.39%--ExactNumber::(anonymous namespace)::ValidateStorage(ExactNumber::BigIntMatrix const&)
+               |                     |          |          
+               |                     |           --12.70%--ExactNumber::(anonymous namespace)::CheckedStorageSize(unsigned long, unsigned long, unsigned long)
+               |                     |          
+               |                      --5.06%--ExactNumber::(anonymous namespace)::CheckedStorageSize(unsigned long, unsigned long, unsigned long)
+               |          
+               |--25.01%--ExactNumber::BigInt::isZero() const
+               |          
+               |--4.92%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long) const
+               |          
+                --1.30%--multigraph::GlobalLayout::AppendOrder(multigraph::DAG const&, unsigned int, TemplateSelf::hash<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&)
+                          |          
+                           --1.29%--multigraph::GlobalLayout::AppendForwardAndInverseTransforms(multigraph::DAG const&, unsigned int, TemplateSelf::vector<unsigned long> const&)
+                                     |          
+                                      --0.88%--ExactNumber::BigIntMatrix::InvertUnitLowerTriangular(ExactNumber::BigIntMatrix const&)
+                                                |          
+                                                 --0.59%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long)
+
+    92.13%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::GlobalLayout::Build(TemplateSelf::vector<multigraph::DAG> const&, TemplateSelf::vector<unsigned int> const&)                                                                                                                                                                                             -      -            
+            |
+            ---multigraph::GlobalLayout::Build(TemplateSelf::vector<multigraph::DAG> const&, TemplateSelf::vector<unsigned int> const&)
+               |          
+               |--60.68%--multigraph::GlobalLayout::Validate() const
+               |          |          
+               |           --47.25%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long) const
+               |                     |          
+               |                     |--22.39%--ExactNumber::(anonymous namespace)::ValidateStorage(ExactNumber::BigIntMatrix const&)
+               |                     |          |          
+               |                     |           --12.70%--ExactNumber::(anonymous namespace)::CheckedStorageSize(unsigned long, unsigned long, unsigned long)
+               |                     |          
+               |                      --5.06%--ExactNumber::(anonymous namespace)::CheckedStorageSize(unsigned long, unsigned long, unsigned long)
+               |          
+               |--25.01%--ExactNumber::BigInt::isZero() const
+               |          
+               |--4.92%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long) const
+               |          
+                --1.30%--multigraph::GlobalLayout::AppendOrder(multigraph::DAG const&, unsigned int, TemplateSelf::hash<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&)
+                          |          
+                           --1.29%--multigraph::GlobalLayout::AppendForwardAndInverseTransforms(multigraph::DAG const&, unsigned int, TemplateSelf::vector<unsigned long> const&)
+                                     |          
+                                      --0.88%--ExactNumber::BigIntMatrix::InvertUnitLowerTriangular(ExactNumber::BigIntMatrix const&)
+                                                |          
+                                                 --0.59%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long)
+
+    60.68%    13.21%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::GlobalLayout::Validate() const                                                                                                                                                                                                                                                                           -      -            
+            |          
+            |--47.47%--multigraph::GlobalLayout::Validate() const
+            |          |          
+            |           --47.25%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long) const
+            |                     |          
+            |                     |--22.39%--ExactNumber::(anonymous namespace)::ValidateStorage(ExactNumber::BigIntMatrix const&)
+            |                     |          |          
+            |                     |           --12.70%--ExactNumber::(anonymous namespace)::CheckedStorageSize(unsigned long, unsigned long, unsigned long)
+            |                     |          
+            |                      --5.06%--ExactNumber::(anonymous namespace)::CheckedStorageSize(unsigned long, unsigned long, unsigned long)
+            |          
+             --13.21%--__libc_start_call_main
+                       main
+                       RunProgram(int, char**)
+                       RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+                       BuildGlobalLayoutAndPrintOutputs(parameter const&, TemplateSelf::vector<multigraph::DAG> const&, multigraph::GlobalLayout&, _IO_FILE*)
+                       multigraph::GlobalLayout::Build(TemplateSelf::vector<multigraph::DAG> const&, TemplateSelf::vector<unsigned int> const&)
+                       multigraph::GlobalLayout::Validate() const
+
+    52.18%    24.71%  Pikaqiu.exe  Pikaqiu.exe           [.] ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long) const                                                                                                                                                                                                                                            -      -            
+            |          
+            |--27.47%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long) const
+            |          |          
+            |          |--22.39%--ExactNumber::(anonymous namespace)::ValidateStorage(ExactNumber::BigIntMatrix const&)
+            |          |          |          
+            |          |           --12.70%--ExactNumber::(anonymous namespace)::CheckedStorageSize(unsigned long, unsigned long, unsigned long)
+            |          |          
+            |           --5.06%--ExactNumber::(anonymous namespace)::CheckedStorageSize(unsigned long, unsigned long, unsigned long)
+            |          
+             --24.71%--__libc_start_call_main
+                       main
+                       RunProgram(int, char**)
+                       RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+                       BuildGlobalLayoutAndPrintOutputs(parameter const&, TemplateSelf::vector<multigraph::DAG> const&, multigraph::GlobalLayout&, _IO_FILE*)
+                       multigraph::GlobalLayout::Build(TemplateSelf::vector<multigraph::DAG> const&, TemplateSelf::vector<unsigned int> const&)
+                       |          
+                       |--19.80%--multigraph::GlobalLayout::Validate() const
+                       |          ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long) const
+                       |          
+                        --4.92%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long) const
+
+    25.32%    25.28%  Pikaqiu.exe  Pikaqiu.exe           [.] ExactNumber::BigInt::isZero() const                                                                                                                                                                                                                                                                                  -      -            
+            |          
+             --25.28%--__libc_start_call_main
+                       main
+                       RunProgram(int, char**)
+                       RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+                       BuildGlobalLayoutAndPrintOutputs(parameter const&, TemplateSelf::vector<multigraph::DAG> const&, multigraph::GlobalLayout&, _IO_FILE*)
+                       multigraph::GlobalLayout::Build(TemplateSelf::vector<multigraph::DAG> const&, TemplateSelf::vector<unsigned int> const&)
+                       |          
+                        --24.97%--ExactNumber::BigInt::isZero() const
+
+    22.69%     9.84%  Pikaqiu.exe  Pikaqiu.exe           [.] ExactNumber::(anonymous namespace)::ValidateStorage(ExactNumber::BigIntMatrix const&)                                                                                                                                                                                                                                -      -            
+            |          
+            |--12.85%--ExactNumber::(anonymous namespace)::ValidateStorage(ExactNumber::BigIntMatrix const&)
+            |          ExactNumber::(anonymous namespace)::CheckedStorageSize(unsigned long, unsigned long, unsigned long)
+            |          
+             --9.84%--__libc_start_call_main
+                       main
+                       RunProgram(int, char**)
+                       RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+                       BuildGlobalLayoutAndPrintOutputs(parameter const&, TemplateSelf::vector<multigraph::DAG> const&, multigraph::GlobalLayout&, _IO_FILE*)
+                       multigraph::GlobalLayout::Build(TemplateSelf::vector<multigraph::DAG> const&, TemplateSelf::vector<unsigned int> const&)
+                       |          
+                        --9.75%--multigraph::GlobalLayout::Validate() const
+                                  |          
+                                   --9.69%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long) const
+                                             ExactNumber::(anonymous namespace)::ValidateStorage(ExactNumber::BigIntMatrix const&)
+
+    17.96%    17.95%  Pikaqiu.exe  Pikaqiu.exe           [.] ExactNumber::(anonymous namespace)::CheckedStorageSize(unsigned long, unsigned long, unsigned long)                                                                                                                                                                                                                  -      -            
+            |          
+             --17.95%--__libc_start_call_main
+                       main
+                       RunProgram(int, char**)
+                       RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+                       BuildGlobalLayoutAndPrintOutputs(parameter const&, TemplateSelf::vector<multigraph::DAG> const&, multigraph::GlobalLayout&, _IO_FILE*)
+                       multigraph::GlobalLayout::Build(TemplateSelf::vector<multigraph::DAG> const&, TemplateSelf::vector<unsigned int> const&)
+                       |          
+                        --17.74%--multigraph::GlobalLayout::Validate() const
+                                  ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long) const
+                                  |          
+                                  |--12.68%--ExactNumber::(anonymous namespace)::ValidateStorage(ExactNumber::BigIntMatrix const&)
+                                  |          ExactNumber::(anonymous namespace)::CheckedStorageSize(unsigned long, unsigned long, unsigned long)
+                                  |          
+                                   --5.06%--ExactNumber::(anonymous namespace)::CheckedStorageSize(unsigned long, unsigned long, unsigned long)
+
+     4.23%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] BuildColouredDAGs(parameter const&, multigraph::MG_enumeration const&, TemplateSelf::vector<multigraph::DAG>&, _IO_FILE*)                                                                                                                                                                                            -      -            
+            |
+            ---BuildColouredDAGs(parameter const&, multigraph::MG_enumeration const&, TemplateSelf::vector<multigraph::DAG>&, _IO_FILE*)
+               |          
+                --4.19%--multigraph::DAG::Build(TemplateSelf::vector<multigraph::CMGDerivedColorings> const&)
+                          |          
+                           --4.14%--multigraph::DAG::BuildSubroutine02ExpandProperQuotientClosure(TemplateSelf::hash<multigraph::CMGadjacentMat>&)
+                                     |          
+                                      --3.88%--multigraph::CMGadjacentMat::EnumerateCanonicalQuotients(TemplateSelf::vector<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&) const
+                                                |          
+                                                 --3.46%--multigraph::CMGadjacentMat::QuotientByPartition(multigraph::VertexPartition const&, multigraph::CMGadjacentMat&) const
+                                                           |          
+                                                           |--0.94%--multigraph::CMGadjacentMat::CanonicalForm()
+                                                           |          |          
+                                                           |           --0.62%--multigraph::MGadjacentMat::CanonicalFormCore(TemplateSelf::vector<unsigned int> const&, TemplateSelf::vector<unsigned int>&) const
+                                                           |          
+                                                            --0.60%--multigraph::MGadjacentMat::InnerComputing02InnerColoring()
+
+     4.19%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::DAG::Build(TemplateSelf::vector<multigraph::CMGDerivedColorings> const&)                                                                                                                                                                                                                                 -      -            
+            |
+            ---multigraph::DAG::Build(TemplateSelf::vector<multigraph::CMGDerivedColorings> const&)
+               |          
+                --4.14%--multigraph::DAG::BuildSubroutine02ExpandProperQuotientClosure(TemplateSelf::hash<multigraph::CMGadjacentMat>&)
+                          |          
+                           --3.88%--multigraph::CMGadjacentMat::EnumerateCanonicalQuotients(TemplateSelf::vector<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&) const
+                                     |          
+                                      --3.46%--multigraph::CMGadjacentMat::QuotientByPartition(multigraph::VertexPartition const&, multigraph::CMGadjacentMat&) const
+                                                |          
+                                                |--0.94%--multigraph::CMGadjacentMat::CanonicalForm()
+                                                |          |          
+                                                |           --0.62%--multigraph::MGadjacentMat::CanonicalFormCore(TemplateSelf::vector<unsigned int> const&, TemplateSelf::vector<unsigned int>&) const
+                                                |          
+                                                 --0.60%--multigraph::MGadjacentMat::InnerComputing02InnerColoring()
+
+     4.14%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::DAG::BuildSubroutine02ExpandProperQuotientClosure(TemplateSelf::hash<multigraph::CMGadjacentMat>&)                                                                                                                                                                                                       -      -            
+            |
+            ---multigraph::DAG::BuildSubroutine02ExpandProperQuotientClosure(TemplateSelf::hash<multigraph::CMGadjacentMat>&)
+               |          
+                --3.88%--multigraph::CMGadjacentMat::EnumerateCanonicalQuotients(TemplateSelf::vector<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&) const
+                          |          
+                           --3.46%--multigraph::CMGadjacentMat::QuotientByPartition(multigraph::VertexPartition const&, multigraph::CMGadjacentMat&) const
+                                     |          
+                                     |--0.94%--multigraph::CMGadjacentMat::CanonicalForm()
+                                     |          |          
+                                     |           --0.62%--multigraph::MGadjacentMat::CanonicalFormCore(TemplateSelf::vector<unsigned int> const&, TemplateSelf::vector<unsigned int>&) const
+                                     |          
+                                      --0.60%--multigraph::MGadjacentMat::InnerComputing02InnerColoring()
+
+     3.88%     0.02%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::CMGadjacentMat::EnumerateCanonicalQuotients(TemplateSelf::vector<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&) const                                                                                                                                                               -      -            
+            |          
+             --3.86%--multigraph::CMGadjacentMat::EnumerateCanonicalQuotients(TemplateSelf::vector<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&) const
+                       |          
+                        --3.46%--multigraph::CMGadjacentMat::QuotientByPartition(multigraph::VertexPartition const&, multigraph::CMGadjacentMat&) const
+                                  |          
+                                  |--0.94%--multigraph::CMGadjacentMat::CanonicalForm()
+                                  |          |          
+                                  |           --0.62%--multigraph::MGadjacentMat::CanonicalFormCore(TemplateSelf::vector<unsigned int> const&, TemplateSelf::vector<unsigned int>&) const
+                                  |          
+                                   --0.60%--multigraph::MGadjacentMat::InnerComputing02InnerColoring()
+
+     3.46%     0.22%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::CMGadjacentMat::QuotientByPartition(multigraph::VertexPartition const&, multigraph::CMGadjacentMat&) const                                                                                                                                                                                               -      -            
+            |          
+             --3.24%--multigraph::CMGadjacentMat::QuotientByPartition(multigraph::VertexPartition const&, multigraph::CMGadjacentMat&) const
+                       |          
+                       |--0.94%--multigraph::CMGadjacentMat::CanonicalForm()
+                       |          |          
+                       |           --0.62%--multigraph::MGadjacentMat::CanonicalFormCore(TemplateSelf::vector<unsigned int> const&, TemplateSelf::vector<unsigned int>&) const
+                       |          
+                        --0.60%--multigraph::MGadjacentMat::InnerComputing02InnerColoring()
+
+     1.30%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::GlobalLayout::AppendOrder(multigraph::DAG const&, unsigned int, TemplateSelf::hash<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&)                                                                                                                                                   -      -            
+            |
+            ---multigraph::GlobalLayout::AppendOrder(multigraph::DAG const&, unsigned int, TemplateSelf::hash<multigraph::CMGadjacentMat>&, TemplateSelf::vector<unsigned long>&)
+               |          
+                --1.29%--multigraph::GlobalLayout::AppendForwardAndInverseTransforms(multigraph::DAG const&, unsigned int, TemplateSelf::vector<unsigned long> const&)
+                          |          
+                           --0.88%--ExactNumber::BigIntMatrix::InvertUnitLowerTriangular(ExactNumber::BigIntMatrix const&)
+                                     |          
+                                      --0.59%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long)
+
+     1.29%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::GlobalLayout::AppendForwardAndInverseTransforms(multigraph::DAG const&, unsigned int, TemplateSelf::vector<unsigned long> const&)                                                                                                                                                                        -      -            
+            |
+            ---multigraph::GlobalLayout::AppendForwardAndInverseTransforms(multigraph::DAG const&, unsigned int, TemplateSelf::vector<unsigned long> const&)
+               |          
+                --0.88%--ExactNumber::BigIntMatrix::InvertUnitLowerTriangular(ExactNumber::BigIntMatrix const&)
+                          |          
+                           --0.59%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long)
+
+     1.23%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000000000001                                                                                                                                                                                                                                                                                                   -      -            
+            |
+            ---0x1
+               |          
+                --0.82%--_int_free
+
+     1.21%     1.20%  Pikaqiu.exe  libc.so.6             [.] _int_free                                                                                                                                                                                                                                                                                                            -      -            
+            |          
+             --0.82%--0x1
+                       _int_free
+
+     1.12%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::CMGadjacentMat::CanonicalForm()                                                                                                                                                                                                                                                                          -      -            
+            |
+            ---multigraph::CMGadjacentMat::CanonicalForm()
+               |          
+                --0.75%--multigraph::MGadjacentMat::CanonicalFormCore(TemplateSelf::vector<unsigned int> const&, TemplateSelf::vector<unsigned int>&) const
+
+     0.88%     0.18%  Pikaqiu.exe  Pikaqiu.exe           [.] ExactNumber::BigIntMatrix::InvertUnitLowerTriangular(ExactNumber::BigIntMatrix const&)                                                                                                                                                                                                                               -      -            
+            |          
+             --0.70%--ExactNumber::BigIntMatrix::InvertUnitLowerTriangular(ExactNumber::BigIntMatrix const&)
+                       |          
+                        --0.59%--ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long)
+
+     0.85%     0.85%  Pikaqiu.exe  libc.so.6             [.] malloc                                                                                                                                                                                                                                                                                                               -      -            
+            |          
+             --0.75%--malloc
+
+     0.76%     0.60%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::MGadjacentMat::CanonicalFormCore(TemplateSelf::vector<unsigned int> const&, TemplateSelf::vector<unsigned int>&) const                                                                                                                                                                                   -      -            
+            |          
+             --0.60%--__libc_start_call_main
+                       main
+                       RunProgram(int, char**)
+                       RunGlobalMolecularTask(parameter const&, _IO_FILE*)
+                       |          
+                        --0.58%--BuildColouredDAGs(parameter const&, multigraph::MG_enumeration const&, TemplateSelf::vector<multigraph::DAG>&, _IO_FILE*)
+                                  |          
+                                   --0.57%--multigraph::DAG::Build(TemplateSelf::vector<multigraph::CMGDerivedColorings> const&)
+                                             |          
+                                              --0.57%--multigraph::DAG::BuildSubroutine02ExpandProperQuotientClosure(TemplateSelf::hash<multigraph::CMGadjacentMat>&)
+
+     0.76%     0.76%  Pikaqiu.exe  libc.so.6             [.] _int_malloc                                                                                                                                                                                                                                                                                                          -      -            
+     0.63%     0.34%  Pikaqiu.exe  Pikaqiu.exe           [.] ExactNumber::BigIntMatrix::operator()(unsigned long, unsigned long)                                                                                                                                                                                                                                                  -      -            
+     0.60%     0.41%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::MGadjacentMat::InnerComputing02InnerColoring()                                                                                                                                                                                                                                                           -      -            
+     0.56%     0.56%  Pikaqiu.exe  libc.so.6             [.] cfree@GLIBC_2.2.5                                                                                                                                                                                                                                                                                                    -      -            
+     0.46%     0.46%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::(anonymous namespace)::CompareUintVec(TemplateSelf::vector<unsigned int> const&, TemplateSelf::vector<unsigned int> const&)                                                                                                                                                                              -      -            
+     0.43%     0.07%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::CMGadjacentMat::ApplyPermutation(TemplateSelf::vector<unsigned int> const&)                                                                                                                                                                                                                              -      -            
+     0.35%     0.31%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::CMGadjacentMat::ComputeMixedColor()                                                                                                                                                                                                                                                                      -      -            
+     0.32%     0.17%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::MGadjacentMat::Permutation(TemplateSelf::vector<unsigned int> const&)                                                                                                                                                                                                                                    -      -            
+     0.20%     0.20%  Pikaqiu.exe  libc.so.6             [.] __libc_calloc                                                                                                                                                                                                                                                                                                        -      -            
+     0.17%     0.17%  Pikaqiu.exe  libc.so.6             [.] malloc_consolidate                                                                                                                                                                                                                                                                                                   -      -            
+     0.15%     0.02%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::CMGadjacentMat::EnumerateLegalVertexPartitions(TemplateSelf::vector<multigraph::VertexPartition>&) const                                                                                                                                                                                                 -      -            
+     0.15%     0.14%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::MGadjacentMat::InnerComputing03InnerColoringbyComponet()                                                                                                                                                                                                                                                 -      -            
+     0.14%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::DAG::InternNode(multigraph::CMGadjacentMat const&, TemplateSelf::hash<multigraph::CMGadjacentMat>&)                                                                                                                                                                                                      -      -            
+     0.14%     0.14%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::MGadjacentMat::InnerComputing01ConnectedComponents()                                                                                                                                                                                                                                                     -      -            
+     0.13%     0.13%  Pikaqiu.exe  libc.so.6             [.] realloc                                                                                                                                                                                                                                                                                                              -      -            
+     0.12%     0.04%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::CMGadjacentMat::operator=(multigraph::CMGadjacentMat const&)                                                                                                                                                                                                                                             -      -            
+     0.12%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::CMGadjacentMat::InnerComputing06ComponentInnerSort2()                                                                                                                                                                                                                                                    -      -            
+     0.12%     0.12%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::CMGadjacentMat::ValidateColoring() const                                                                                                                                                                                                                                                                 -      -            
+     0.11%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::GlobalLayout::BuildGIRDAG()                                                                                                                                                                                                                                                                              -      -            
+     0.11%     0.11%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::(anonymous namespace)::PermuteUintVec(TemplateSelf::vector<unsigned int>&, TemplateSelf::vector<unsigned int> const&)                                                                                                                                                                                    -      -            
+     0.10%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::GIRLoweringWorkspace::ComputeIRadd(TemplateSelf::vector<unsigned int> const&, multigraph::CMGadjacentMat const&, multigraph::GIRDAG&)                                                                                                                                                                    -      -            
+     0.10%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::GIRLoweringWorkspace::ComputeIRaddInternal(TemplateSelf::vector<unsigned int> const&, multigraph::CMGadjacentMat const&, multigraph::GIRDAG&)                                                                                                                                                            -      -            
+     0.10%     0.01%  Pikaqiu.exe  Pikaqiu.exe           [.] ExactNumber::operator*(ExactNumber::BigInt, ExactNumber::BigInt const&)                                                                                                                                                                                                                                              -      -            
+     0.09%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa7a00e06                                                                                                                                                                                                                                                                                                   -      -            
+     0.09%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa7923827                                                                                                                                                                                                                                                                                                   -      -            
+     0.09%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6c775ae                                                                                                                                                                                                                                                                                                   -      -            
+     0.09%     0.09%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::CMGadjacentMat::Hash() const                                                                                                                                                                                                                                                                             -      -            
+     0.09%     0.00%  Pikaqiu.exe  [unknown]             [.] 0000000000000000                                                                                                                                                                                                                                                                                                     -      -            
+     0.08%     0.01%  Pikaqiu.exe  Pikaqiu.exe           [.] ExactNumber::BigInt::operator*=(ExactNumber::BigInt const&)                                                                                                                                                                                                                                                          -      -            
+     0.08%     0.01%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::VertexPartition::AppendOneVertexExtensions(TemplateSelf::vector<multigraph::VertexPartition>&) const                                                                                                                                                                                                     -      -            
+     0.08%     0.08%  Pikaqiu.exe  Pikaqiu.exe           [.] ExactNumber::BigIntMatrix::~BigIntMatrix()                                                                                                                                                                                                                                                                           -      -            
+     0.08%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::GlobalLayout::~GlobalLayout()                                                                                                                                                                                                                                                                            -      -            
+     0.08%     0.08%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::(anonymous namespace)::SortVecOfVec(TemplateSelf::vector<TemplateSelf::vector<unsigned int> >&)                                                                                                                                                                                                          -      -            
+     0.08%     0.08%  Pikaqiu.exe  Pikaqiu.exe           [.] TemplateSelf::hash<multigraph::(anonymous namespace)::CanonicalState>::appendCore(multigraph::(anonymous namespace)::CanonicalState const&, unsigned long&) [clone .constprop.0]                                                                                                                                     -      -            
+     0.08%     0.08%  Pikaqiu.exe  Pikaqiu.exe           [.] ExactNumber::(anonymous namespace)::multiplyKaratsuba(std::vector<unsigned int, std::allocator<unsigned int> > const&, std::vector<unsigned int, std::allocator<unsigned int> > const&)                                                                                                                              -      -            
+     0.08%     0.08%  Pikaqiu.exe  libc.so.6             [.] __memset_avx2_unaligned_erms                                                                                                                                                                                                                                                                                         -      -            
+     0.08%     0.08%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::VertexPartition::IsRestrictedGrowthString() const                                                                                                                                                                                                                                                        -      -            
+     0.07%     0.07%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::(anonymous namespace)::AddMultiplicity(unsigned int&, unsigned int)                                                                                                                                                                                                                                      -      -            
+     0.07%     0.07%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::MGadjacentMat::AdjMatCompare(TemplateSelf::vector<unsigned int> const&, TemplateSelf::vector<unsigned int> const&, unsigned long, unsigned long)                                                                                                                                                         -      -            
+     0.07%     0.07%  Pikaqiu.exe  libc.so.6             [.] unlink_chunk.constprop.0                                                                                                                                                                                                                                                                                             -      -            
+     0.07%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] ExactNumber::BigIntMatrix::Reset(unsigned long, unsigned long, unsigned long)                                                                                                                                                                                                                                        -      -            
+     0.05%     0.02%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::CMGadjacentMat::ShouldPrunePartition(multigraph::VertexPartition const&) const                                                                                                                                                                                                                           -      -            
+     0.05%     0.05%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::(anonymous namespace)::SortPairs(TemplateSelf::vector<unsigned int>&)                                                                                                                                                                                                                                    -      -            
+     0.05%     0.03%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::VertexPartition::ExtendToBlock(unsigned long, multigraph::VertexPartition&) const                                                                                                                                                                                                                        -      -            
+     0.05%     0.05%  Pikaqiu.exe  Pikaqiu.exe           [.] free@plt                                                                                                                                                                                                                                                                                                             -      -            
+     0.05%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::BuildCMGContractionResult(TemplateSelf::vector<multigraph::CMGadjacentMat> const&, TemplateSelf::vector<TemplateSelf::vector<unsigned int> > const&, TemplateSelf::vector<TemplateSelf::vector<unsigned int> > const&, unsigned long, multigraph::CMGadjacentMat&, TemplateSelf::vector<unsigned int>&)  -      -            
+     0.05%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6dea97c                                                                                                                                                                                                                                                                                                   -      -            
+     0.05%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6de9892                                                                                                                                                                                                                                                                                                   -      -            
+     0.05%     0.03%  Pikaqiu.exe  Pikaqiu.exe           [.] ExactNumber::BigInt::operator+=(ExactNumber::BigInt const&)                                                                                                                                                                                                                                                          -      -            
+     0.05%     0.05%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::VertexPartition::GetBlockOfVertex(unsigned long) const                                                                                                                                                                                                                                                   -      -            
+     0.05%     0.05%  Pikaqiu.exe  Pikaqiu.exe           [.] ExactNumber::operator==(ExactNumber::BigInt const&, ExactNumber::BigInt const&)                                                                                                                                                                                                                                      -      -            
+     0.05%     0.05%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::MGadjacentMat::operator=(multigraph::MGadjacentMat const&) [clone .part.0]                                                                                                                                                                                                                               -      -            
+     0.05%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6dfdf2e                                                                                                                                                                                                                                                                                                   -      -            
+     0.05%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::EnumerateCMGDerivedLayer(TemplateSelf::vector<multigraph::MGadjacentMat> const&, unsigned long, TemplateSelf::vector<unsigned int> const&, TemplateSelf::vector<unsigned int> const&, TemplateSelf::vector<multigraph::CMGDerivedColorings>&)                                                            -      -            
+     0.05%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::CMGDerivedColorings::BlackWhitePrintedSet(unsigned long, TemplateSelf::vector<unsigned int> const&, TemplateSelf::vector<unsigned int> const&)                                                                                                                                                           -      -            
+     0.04%     0.04%  Pikaqiu.exe  libc.so.6             [.] __memmove_avx_unaligned                                                                                                                                                                                                                                                                                              -      -            
+     0.04%     0.04%  Pikaqiu.exe  Pikaqiu.exe           [.] std::vector<ExactNumber::BigInt, std::allocator<ExactNumber::BigInt> >::_M_default_append(unsigned long)                                                                                                                                                                                                             -      -            
+     0.04%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6dea8f3                                                                                                                                                                                                                                                                                                   -      -            
+     0.04%     0.04%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::MGadjacentMat::~MGadjacentMat()                                                                                                                                                                                                                                                                          -      -            
+     0.04%     0.02%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::CMGadjacentMat::CMGadjacentMat(multigraph::CMGadjacentMat const&)                                                                                                                                                                                                                                        -      -            
+     0.04%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x000000000022ea61                                                                                                                                                                                                                                                                                                   -      -            
+     0.04%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::CMGDerivedColorings::EnumerateWhiteRefinements(multigraph::CMGadjacentMat const&, TemplateSelf::vector<unsigned int> const&) const                                                                                                                                                                       -      -            
+     0.04%     0.04%  Pikaqiu.exe  libc.so.6             [.] __memmove_avx_unaligned_erms                                                                                                                                                                                                                                                                                         -      -            
+     0.04%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6dfdee4                                                                                                                                                                                                                                                                                                   -      -            
+     0.04%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000000345a61                                                                                                                                                                                                                                                                                                   -      -            
+     0.04%     0.01%  Pikaqiu.exe  Pikaqiu.exe           [.] ExactNumber::BigInt::operator-=(ExactNumber::BigInt const&)                                                                                                                                                                                                                                                          -      -            
+     0.03%     0.02%  Pikaqiu.exe  Pikaqiu.exe           [.] ExactNumber::BigInt::BigInt()                                                                                                                                                                                                                                                                                        -      -            
+     0.03%     0.03%  Pikaqiu.exe  libc.so.6             [.] __memset_avx2_unaligned                                                                                                                                                                                                                                                                                              -      -            
+     0.03%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000000020141                                                                                                                                                                                                                                                                                                   -      -            
+     0.03%     0.03%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::CMGadjacentMat::operator==(multigraph::CMGadjacentMat const&) const                                                                                                                                                                                                                                      -      -            
+     0.03%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] ExactNumber::BigIntMatrix::BigIntMatrix(unsigned long, unsigned long, unsigned long)                                                                                                                                                                                                                                 -      -            
+     0.02%     0.02%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::DAG::AddQuotientEdge(unsigned long, unsigned long, unsigned long)                                                                                                                                                                                                                                        -      -            
+     0.02%     0.02%  Pikaqiu.exe  [unknown]             [k] 0xffffffffa6c3ed23                                                                                                                                                                                                                                                                                                   -      -            
+     0.02%     0.02%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::MGadjacentMat::MGadjacentMat(multigraph::MGadjacentMat const&)                                                                                                                                                                                                                                           -      -            
+     0.02%     0.02%  Pikaqiu.exe  Pikaqiu.exe           [.] ExactNumber::BigInt::isNegative() const                                                                                                                                                                                                                                                                              -      -            
+     0.02%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000000020df1                                                                                                                                                                                                                                                                                                   -      -            
+     0.02%     0.02%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::MGadjacentMat::InnerComputing00NeighborCount()                                                                                                                                                                                                                                                           -      -            
+     0.02%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::GlobalLayout::BuildHComponentTable(TemplateSelf::hash<multigraph::CMGadjacentMat> const&)                                                                                                                                                                                                                -      -            
+     0.02%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::CMGadjacentMat::ExtractComponents() const                                                                                                                                                                                                                                                                -      -            
+     0.02%     0.02%  Pikaqiu.exe  [unknown]             [k] 0xffffffffa6ded284                                                                                                                                                                                                                                                                                                   -      -            
+     0.02%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6dedf0c                                                                                                                                                                                                                                                                                                   -      -            
+     0.02%     0.00%  Pikaqiu.exe  ld-linux-x86-64.so.2  [.] _dl_start_user                                                                                                                                                                                                                                                                                                       -      -            
+     0.02%     0.02%  Pikaqiu.exe  ld-linux-x86-64.so.2  [.] _dl_relocate_object                                                                                                                                                                                                                                                                                                  -      -            
+     0.02%     0.00%  Pikaqiu.exe  ld-linux-x86-64.so.2  [.] _dl_sysdep_start                                                                                                                                                                                                                                                                                                     -      -            
+     0.02%     0.00%  Pikaqiu.exe  ld-linux-x86-64.so.2  [.] dl_main                                                                                                                                                                                                                                                                                                              -      -            
+     0.02%     0.02%  Pikaqiu.exe  [unknown]             [k] 0xffffffffa6dedfea                                                                                                                                                                                                                                                                                                   -      -            
+     0.02%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa7a00bb2                                                                                                                                                                                                                                                                                                   -      -            
+     0.02%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa7923d72                                                                                                                                                                                                                                                                                                   -      -            
+     0.02%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6fb38f9                                                                                                                                                                                                                                                                                                   -      -            
+     0.02%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6c90ab4                                                                                                                                                                                                                                                                                                   -      -            
+     0.02%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000000c9341                                                                                                                                                                                                                                                                                                   -      -            
+     0.02%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000000020851                                                                                                                                                                                                                                                                                                   -      -            
+     0.02%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6dedfa9                                                                                                                                                                                                                                                                                                   -      -            
+     0.02%     0.02%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::(anonymous namespace)::ValidatePartitionGraph(multigraph::CMGadjacentMat const&)                                                                                                                                                                                                                         -      -            
+     0.02%     0.02%  Pikaqiu.exe  [unknown]             [k] 0xffffffffa6dfddec                                                                                                                                                                                                                                                                                                   -      -            
+     0.02%     0.02%  Pikaqiu.exe  libc.so.6             [.] _int_realloc                                                                                                                                                                                                                                                                                                         -      -            
+     0.02%     0.02%  Pikaqiu.exe  Pikaqiu.exe           [.] TemplateSelf::vector<multigraph::(anonymous namespace)::CanonicalState>::recount(unsigned long)                                                                                                                                                                                                                      -      -            
+     0.02%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000000020151                                                                                                                                                                                                                                                                                                   -      -            
+     0.02%     0.01%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::(anonymous namespace)::CMGContractionBuilder::ApplyTrackedPermutation(TemplateSelf::vector<unsigned int> const&, TemplateSelf::vector<unsigned int>&)                                                                                                                                                    -      -            
+     0.02%     0.02%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::CMGadjacentMat::~CMGadjacentMat()                                                                                                                                                                                                                                                                        -      -            
+     0.02%     0.02%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::MGadjacentMat::InnerComputing04ComponentStatis()                                                                                                                                                                                                                                                         -      -            
+     0.02%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000000000012                                                                                                                                                                                                                                                                                                   -      -            
+     0.02%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000000925f1                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.01%  Pikaqiu.exe  Pikaqiu.exe           [.] ExactNumber::BigInt::BigInt(ExactNumber::BigInt const&)                                                                                                                                                                                                                                                              -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000000056111                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.01%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::CMGadjacentMat::CMGadjacentMat()                                                                                                                                                                                                                                                                         -      -            
+     0.01%     0.01%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::GIRDAG::Validate() const                                                                                                                                                                                                                                                                                 -      -            
+     0.01%     0.01%  Pikaqiu.exe  Pikaqiu.exe           [.] ExactNumber::BigInt::compareAbs(ExactNumber::BigInt const&) const                                                                                                                                                                                                                                                    -      -            
+     0.01%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] ExactNumber::BigInt::addAbs(ExactNumber::BigInt const&)                                                                                                                                                                                                                                                              -      -            
+     0.01%     0.01%  Pikaqiu.exe  Pikaqiu.exe           [.] std::vector<unsigned int, std::allocator<unsigned int> >::operator=(std::vector<unsigned int, std::allocator<unsigned int> > const&) [clone .isra.0]                                                                                                                                                                 -      -            
+     0.01%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::CMGadjacentMat::SetOuterColorCode(TemplateSelf::vector<unsigned int> const&)                                                                                                                                                                                                                             -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x000000000329dd80                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000000cb831                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000027e5dd0                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.01%  Pikaqiu.exe  Pikaqiu.exe           [.] malloc@plt                                                                                                                                                                                                                                                                                                           -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x000000000006b641                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000027ca080                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000001776f1                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000033b3c00                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x000000000008a3e1                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000033d6850                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x000000000328ad10                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000003246880                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000032cfb30                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000033f1860                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.01%  Pikaqiu.exe  Pikaqiu.exe           [.] calloc@plt                                                                                                                                                                                                                                                                                                           -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x000000000339f3a0                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000000020841                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000027d4f30                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xe000000000033aa8                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000300000002                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000000061a21                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000003270890                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x000000000325d7c0                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000001eec91                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000033f78c0                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000003252a90                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.01%  Pikaqiu.exe  libstdc++.so.6.0.29   [.] free@plt                                                                                                                                                                                                                                                                                                             -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000032bb9f0                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.01%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::CMGadjacentMat::move(multigraph::CMGadjacentMat&)                                                                                                                                                                                                                                                        -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000032881a0                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.01%  Pikaqiu.exe  libstdc++.so.6.0.29   [.] operator new(unsigned long)                                                                                                                                                                                                                                                                                          -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000032e37c0                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000032b7d40                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000000089c61                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x000000000341ce50                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000000000031                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.01%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::MGadjacentMat::move(multigraph::MGadjacentMat&)                                                                                                                                                                                                                                                          -      -            
+     0.01%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::CMGadjacentMat::move(multigraph::CMGadjacentMat&) [clone .part.0]                                                                                                                                                                                                                                        -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000000000007                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000001d0ee1                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000003255ac0                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000003239330                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000003293660                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x000000000326d100                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.01%  Pikaqiu.exe  Pikaqiu.exe           [.] realloc@plt                                                                                                                                                                                                                                                                                                          -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000000000211                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000001bc1b1                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x000000000325e700                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000001cabb1                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000032c2750                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000001810b1                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000003284310                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.01%  Pikaqiu.exe  Pikaqiu.exe           [.] void std::vector<unsigned int, std::allocator<unsigned int> >::emplace_back<unsigned int>(unsigned int&&)                                                                                                                                                                                                            -      -            
+     0.01%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::GlobalLayout::BuildCombinationNormalizationDenominators()                                                                                                                                                                                                                                                -      -            
+     0.01%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] ExactNumber::BigInt::BigInt(long)                                                                                                                                                                                                                                                                                    -      -            
+     0.01%     0.01%  Pikaqiu.exe  [unknown]             [k] 0xffffffffa79209de                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa7a00dfb                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000032e6e90                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.01%  Pikaqiu.exe  [unknown]             [k] 0xffffffffa6dee01f                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000000079fa1                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000003254760                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.01%  Pikaqiu.exe  [unknown]             [k] 0xffffffffa6dfde8a                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000033aef40                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000033e2bc0                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000033d5a50                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000032a9010                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000033bd5f0                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000003303c50                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6dfdf20                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6decae8                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000033b6730                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::GIRLoweringWorkspace::Initialize(multigraph::CMGadjacentMat const&, multigraph::GIRDAG&)                                                                                                                                                                                                                 -      -            
+     0.01%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::GIRLoweringWorkspace::AddInitialVirtualEdges(multigraph::CMGadjacentMat const&, multigraph::GIRDAG&)                                                                                                                                                                                                     -      -            
+     0.01%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::MGadjacentMat::FromMGincidentMat(multigraph::MGincidentMat const&)                                                                                                                                                                                                                                       -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x000000000335d240                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000000000021                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000033b8fd0                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::CMGDerivedColorings::EnumerateBlackWhitePrecolorings(unsigned long) const                                                                                                                                                                                                                                -      -            
+     0.01%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::(anonymous namespace)::InsertBlackWhitePartition(multigraph::MGadjacentMat const&, TemplateSelf::vector<unsigned int> const&, TemplateSelf::hash<multigraph::CMGadjacentMat>&)                                                                                                                           -      -            
+     0.01%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::CMGadjacentMat::BuildBlackWhite(multigraph::MGadjacentMat const&, TemplateSelf::vector<unsigned int> const&)                                                                                                                                                                                             -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xbf8b4808ec8348fc                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::CMGadjacentMat::~CMGadjacentMat()                                                                                                                                                                                                                                                                        -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x000000000003a401                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000003771360                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000000020931                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x000000000481b1a0                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000003270010                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.01%  Pikaqiu.exe  [unknown]             [k] 0xffffffffa6fb36cb                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.01%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::GIRLoweringWorkspace::RegisterVariable(multigraph::CMGadjacentMat const&, unsigned long, TemplateSelf::vector<unsigned int> const&)                                                                                                                                                                      -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x0000000003775bd0                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::DAGnode::initial(multigraph::CMGadjacentMat const&)                                                                                                                                                                                                                                                      -      -            
+     0.01%     0.01%  Pikaqiu.exe  Pikaqiu.exe           [.] multigraph::(anonymous namespace)::UnsignedToBigInt(unsigned long)                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.01%  Pikaqiu.exe  [unknown]             [k] 0xffffffffa7000ed4                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6fb37f0                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa7025560                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa7001629                                                                                                                                                                                                                                                                                                   -      -            
+     0.01%     0.01%  Pikaqiu.exe  Pikaqiu.exe           [.] std::vector<unsigned int, std::allocator<unsigned int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<unsigned int*, std::vector<unsigned int, std::allocator<unsigned int> > >, unsigned long, unsigned int const&)                                                                                                 -      -            
+     0.00%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6fb34ae                                                                                                                                                                                                                                                                                                   -      -            
+     0.00%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa7001645                                                                                                                                                                                                                                                                                                   -      -            
+     0.00%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa7001493                                                                                                                                                                                                                                                                                                   -      -            
+     0.00%     0.00%  Pikaqiu.exe  [unknown]             [k] 0xffffffffa72e0127                                                                                                                                                                                                                                                                                                   -      -            
+     0.00%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6fab1de                                                                                                                                                                                                                                                                                                   -      -            
+     0.00%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6fdc1f2                                                                                                                                                                                                                                                                                                   -      -            
+     0.00%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6fdafd1                                                                                                                                                                                                                                                                                                   -      -            
+     0.00%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6fd7566                                                                                                                                                                                                                                                                                                   -      -            
+     0.00%     0.00%  Pikaqiu.exe  Pikaqiu.exe           [.] ExactNumber::BigInt::operator=(ExactNumber::BigInt const&)                                                                                                                                                                                                                                                           -      -            
+     0.00%     0.00%  Pikaqiu.exe  ld-linux-x86-64.so.2  [.] __GI___tunables_init                                                                                                                                                                                                                                                                                                 -      -            
+     0.00%     0.00%  Pikaqiu.exe  ld-linux-x86-64.so.2  [.] _dl_start                                                                                                                                                                                                                                                                                                            -      -            
+     0.00%     0.00%  Pikaqiu.exe  [unknown]             [k] 0xffffffffa6f5c699                                                                                                                                                                                                                                                                                                   -      -            
+     0.00%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6fafbc7                                                                                                                                                                                                                                                                                                   -      -            
+     0.00%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6faf703                                                                                                                                                                                                                                                                                                   -      -            
+     0.00%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6f5ca0b                                                                                                                                                                                                                                                                                                   -      -            
+     0.00%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6c90b78                                                                                                                                                                                                                                                                                                   -      -            
+     0.00%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6fafbb7                                                                                                                                                                                                                                                                                                   -      -            
+     0.00%     0.00%  Pikaqiu.exe  [unknown]             [k] 0xffffffffa72e0787                                                                                                                                                                                                                                                                                                   -      -            
+     0.00%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6faf8e9                                                                                                                                                                                                                                                                                                   -      -            
+     0.00%     0.00%  Pikaqiu.exe  [unknown]             [k] 0xffffffffa6fd4b89                                                                                                                                                                                                                                                                                                   -      -            
+     0.00%     0.00%  Pikaqiu.exe  [unknown]             [k] 0xffffffffa72c3efb                                                                                                                                                                                                                                                                                                   -      -            
+     0.00%     0.00%  Pikaqiu.exe  ld-linux-x86-64.so.2  [.] _start                                                                                                                                                                                                                                                                                                               -      -            
+     0.00%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6faf81e                                                                                                                                                                                                                                                                                                   -      -            
+     0.00%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6c90a86                                                                                                                                                                                                                                                                                                   -      -            
+     0.00%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6fb069f                                                                                                                                                                                                                                                                                                   -      -            
+     0.00%     0.00%  Pikaqiu.exe  [unknown]             [.] 0xffffffffa6fdc1a9                                                                                                                                                                                                                                                                                                   -      -            
+     0.00%     0.00%  Pikaqiu.exe  [unknown]             [.] 0x00000000032a93c0                                                                                                                                                                                                                                                                                                   -      -            
+
+
+#
+# (Tip: To see callchains in a more compact form: perf report -g folded)
+#

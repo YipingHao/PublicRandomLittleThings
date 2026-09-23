@@ -1,0 +1,23 @@
+	Command being timed: "perf stat -x ; -o /share/Hyper/experiments/generation_benchmark/profiles/C14-7/FIgenerator_water_order3_perf_b7b4c46/n2/perf_stat.csv -e task-clock,cycles,instructions,stalled-cycles-frontend,branches,branch-misses,cache-references,cache-misses,l1_dtlb_misses,l2_dtlb_misses,page-faults,minor-faults,major-faults,context-switches,cpu-migrations -- taskset -c 7 env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 BLIS_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 stdbuf -oL -eL ./Pikaqiu.exe /share/Hyper/experiments/generation_benchmark/profiles/C14-7/FIgenerator_water_order3_perf_b7b4c46/inputs/water_n2_order3.txt /share/Hyper/experiments/generation_benchmark/profiles/C14-7/FIgenerator_water_order3_perf_b7b4c46/n2/output"
+	User time (seconds): 0.06
+	System time (seconds): 0.02
+	Percent of CPU this job got: 87%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.10
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 11264
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 5
+	Minor (reclaiming a frame) page faults: 2602
+	Voluntary context switches: 18
+	Involuntary context switches: 4
+	Swaps: 0
+	File system inputs: 176
+	File system outputs: 1440
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

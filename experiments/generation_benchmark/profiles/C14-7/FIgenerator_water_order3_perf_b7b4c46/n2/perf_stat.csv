@@ -1,0 +1,18 @@
+# started on Wed Sep 23 14:19:20 2026
+
+82.22;msec;task-clock:u;82220719;100.00;0.960;CPUs utilized
+142797589;;cycles:u;45463282;55.00;1.737;GHz
+349416312;;instructions:u;45307169;55.00;2.45;insn per cycle
+;;;;;0.08;stalled cycles per insn
+29688942;;stalled-cycles-frontend:u;46189035;56.00;20.79;frontend cycles idle
+74362103;;branches:u;45867481;55.00;904.420;M/sec
+954209;;branch-misses:u;46380121;56.00;1.28;of all branches
+1922527;;cache-references:u;46478354;56.00;23.383;M/sec
+123017;;cache-misses:u;45029327;54.00;6.40;of all cache refs
+160895;;l1_dtlb_misses:u;45035097;54.00;1.957;M/sec
+9671;;l2_dtlb_misses:u;45353729;55.00;117.622;K/sec
+1763;;page-faults:u;82220719;100.00;21.442;K/sec
+1760;;minor-faults:u;82220719;100.00;21.406;K/sec
+3;;major-faults:u;82220719;100.00;36.487;/sec
+0;;context-switches:u;82220719;100.00;0.000;/sec
+0;;cpu-migrations:u;82220719;100.00;0.000;/sec

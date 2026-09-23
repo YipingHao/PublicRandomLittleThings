@@ -1,0 +1,93 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 1K of event 'cycles:u'
+# Event count (approx.): 98408727830
+#
+# Overhead  Symbol                                                                                                                          IPC   [IPC Coverage]
+# ........  ..............................................................................................................................  ....................
+#
+    81.71%  [.] FIgenerator::HomogeneousPolynomial<unsigned int>::compareMonomial(unsigned int const*, unsigned int const*) const           -      -            
+            |
+            ---FIgenerator::HomogeneousPolynomial<unsigned int>::searchRaw(unsigned int const*) const
+               void FIgenerator::split<unsigned int>(FIgenerator::HomogeneousPolynomial<unsigned int> const&, FIgenerator::Permutaions const&, TemplateSelf::vector<FIgenerator::MononialSet<unsigned int> >&, TemplateSelf::vector<unsigned long>&)
+               FIgenerator::console<unsigned int>::processPartition(unsigned long const*)
+               FIgenerator::console<unsigned int>::Next(bool)
+               MainTask(parameter&)
+               main
+               __libc_start_call_main
+               __libc_start_main@@GLIBC_2.34
+               _start
+
+    18.02%  [.] FIgenerator::HomogeneousPolynomial<unsigned int>::searchRaw(unsigned int const*) const                                      -      -            
+            |
+            ---void FIgenerator::split<unsigned int>(FIgenerator::HomogeneousPolynomial<unsigned int> const&, FIgenerator::Permutaions const&, TemplateSelf::vector<FIgenerator::MononialSet<unsigned int> >&, TemplateSelf::vector<unsigned long>&)
+               FIgenerator::console<unsigned int>::processPartition(unsigned long const*)
+               FIgenerator::console<unsigned int>::Next(bool)
+               MainTask(parameter&)
+               main
+               __libc_start_call_main
+               __libc_start_main@@GLIBC_2.34
+               _start
+
+     0.07%  [k] 0xffffffff9d800df0                                                                                                          -      -            
+            |
+            ---FIgenerator::HomogeneousPolynomial<unsigned int>::compareMonomial(unsigned int const*, unsigned int const*) const
+               FIgenerator::HomogeneousPolynomial<unsigned int>::searchRaw(unsigned int const*) const
+               void FIgenerator::split<unsigned int>(FIgenerator::HomogeneousPolynomial<unsigned int> const&, FIgenerator::Permutaions const&, TemplateSelf::vector<FIgenerator::MononialSet<unsigned int> >&, TemplateSelf::vector<unsigned long>&)
+               FIgenerator::console<unsigned int>::processPartition(unsigned long const*)
+               FIgenerator::console<unsigned int>::Next(bool)
+               MainTask(parameter&)
+               main
+               __libc_start_call_main
+               __libc_start_main@@GLIBC_2.34
+               _start
+
+     0.07%  [k] 0xffffffff9cbedfea                                                                                                          -      -            
+            |
+            ---0xffffffff9cbea8f3
+               0xffffffff9ca775ae
+               0xffffffff9d723827
+               0xffffffff9d800e06
+               FIgenerator::HomogeneousPolynomial<unsigned int>::compareMonomial(unsigned int const*, unsigned int const*) const
+               FIgenerator::HomogeneousPolynomial<unsigned int>::searchRaw(unsigned int const*) const
+               void FIgenerator::split<unsigned int>(FIgenerator::HomogeneousPolynomial<unsigned int> const&, FIgenerator::Permutaions const&, TemplateSelf::vector<FIgenerator::MononialSet<unsigned int> >&, TemplateSelf::vector<unsigned long>&)
+               FIgenerator::console<unsigned int>::processPartition(unsigned long const*)
+               FIgenerator::console<unsigned int>::Next(bool)
+               MainTask(parameter&)
+               main
+               __libc_start_call_main
+               __libc_start_main@@GLIBC_2.34
+               _start
+
+     0.07%  [.] bool FIgenerator::Permutaions::apply<unsigned int>(unsigned long, unsigned int const*, unsigned int*, unsigned long) const  -      -            
+            |
+            ---void FIgenerator::split<unsigned int>(FIgenerator::HomogeneousPolynomial<unsigned int> const&, FIgenerator::Permutaions const&, TemplateSelf::vector<FIgenerator::MononialSet<unsigned int> >&, TemplateSelf::vector<unsigned long>&)
+               FIgenerator::console<unsigned int>::processPartition(unsigned long const*)
+               FIgenerator::console<unsigned int>::Next(bool)
+               MainTask(parameter&)
+               main
+               __libc_start_call_main
+               __libc_start_main@@GLIBC_2.34
+               _start
+
+     0.07%  [k] 0xffffffff9d737486                                                                                                          -      -            
+            |
+            ---FIgenerator::HomogeneousPolynomial<unsigned int>::compareMonomial(unsigned int const*, unsigned int const*) const
+               FIgenerator::HomogeneousPolynomial<unsigned int>::searchRaw(unsigned int const*) const
+               void FIgenerator::split<unsigned int>(FIgenerator::HomogeneousPolynomial<unsigned int> const&, FIgenerator::Permutaions const&, TemplateSelf::vector<FIgenerator::MononialSet<unsigned int> >&, TemplateSelf::vector<unsigned long>&)
+               FIgenerator::console<unsigned int>::processPartition(unsigned long const*)
+               FIgenerator::console<unsigned int>::Next(bool)
+               MainTask(parameter&)
+               main
+               __libc_start_call_main
+               __libc_start_main@@GLIBC_2.34
+               _start
+
+
+
+#
+# (Tip: To set sampling period of individual events use perf record -e cpu/cpu-cycles,period=100001/,cpu/branches,period=10001/ ...)
+#

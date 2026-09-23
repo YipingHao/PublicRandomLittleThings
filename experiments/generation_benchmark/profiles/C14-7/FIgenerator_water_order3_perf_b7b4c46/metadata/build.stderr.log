@@ -1,0 +1,2 @@
+rm: cannot remove '../obj/*.o': No such file or directory
+make: *** [makefile:60: clean] Error 1

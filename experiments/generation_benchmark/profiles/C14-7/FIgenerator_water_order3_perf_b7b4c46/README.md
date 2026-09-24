@@ -100,6 +100,72 @@ the combination of weak low-bit mixing, a power-of-two bucket mask, linear
 probing, and highly structured sorted monomial keys; it is not evidence that
 the table is too full or that TLB misses dominate.
 
+### Avalanche candidate, same-host validation
+
+A candidate patch that adds only the SplitMix64 final avalanche was built from
+commit `b7b4c46` with the same GCC 11.5.0 and `-O2 -std=c++11`, then run on
+C14-7 CPU 6 while the original long sampling run remained pinned to CPU 7.
+The order-3 CPU time fell from 3,858.036524 s to 5.358578 s, a same-host speedup
+of 719.97 times.  The sum of the printed order-2 and order-3 times fell from
+3,858.750582 s to 5.380737 s.  After normalizing elapsed-time and output-path
+text, the complete stdout is byte-identical to the original run.  Peak RSS was
+161,052 KiB versus 136,968 KiB in the earlier run; this single-run difference
+is retained but is not interpreted as a stable memory effect because the patch
+does not change any table capacity.
+
+The exact candidate `polynomial.cpp`, build logs, stdout, stderr, and GNU time
+record are under `n3/hashfix_candidate_C14-7/`.
+
+## Exact-growth `realloc` probe
+
+`TemplateSelf::vector::recount()` grows capacity to exactly `NewCount`, while
+several monomial paths call it once per appended monomial.  A glibc-only
+`LD_PRELOAD` probe (`realloc_probe.c`) measured allocator behavior without
+changing FIgenerator source.  On C14-7, the `n=2`, order-3 run made 205,139
+`realloc` calls; 4,086 moved to a new address, with an 8,515,008-byte aggregate
+copy upper bound.  The `n=2`, order-5 run made 59,988,499 calls; 530,105 moved,
+with a 5,599,435,092-byte aggregate copy upper bound and a 104,574,960-byte
+largest single move upper bound.  Large glibc reallocations may use `mremap`, so
+these byte totals are upper bounds on physical copying rather than measured
+memory-bus traffic.
+
+This confirms linear allocator-call growth and a real large relocation burden.
+It does not mean every append currently copies the whole prefix: most calls
+returned the same address.  Nevertheless, because exact growth provides no
+amortized-capacity guarantee, the worst-case cumulative relocation remains
+quadratic and is a likely next bottleneck after the hash fix.  The raw counters
+are recorded in `n3/hotspot_snapshot/realloc_probe_results.txt`.
+
+For the avalanche-fixed `n=3`, order-3 candidate itself, the probe observed
+13,514,181 `realloc` calls, of which 6,830 moved, with a 435,736,728-byte
+aggregate move upper bound and a 13,188,264-byte largest move upper bound.
+Thus glibc handled almost all calls in place for this particular run, avoiding
+the quadratic worst case in practice, but the program still entered the
+allocator more than 13 million times for a roughly five-second calculation.
+
+### Append-growth candidate, same-host validation
+
+The follow-up candidate replaces the append-like
+`recount(old_count + order)` calls with `vector::append()`, which uses the
+container's geometric capacity growth.  Polynomial multiplication now also
+allocates its fixed-size merged-monomial scratch vector once and reuses it.
+`recount()` is retained for genuine resize operations.
+
+On the same C14-7 CPU 6 and input, the uninstrumented Order-3 CPU time was
+4.130247 s, the Order 2--3 sum was 4.148382 s, wall time was 4.34 s, and peak
+RSS was 147,080 KiB.  This is a further 22.92% reduction in Order-3 CPU time
+from the hash-only candidate and a 934.09-fold speedup over the original run.
+After normalizing timing and output-path fields, all 70,481 stdout lines are
+exactly equal to the original run.
+
+The allocator probe recorded only 6,606 `realloc` calls: 99.9511% fewer, or
+2,045.74 times fewer, than the 13,514,181 calls in the hash-only candidate.
+Of these, 2,647 returned a different address; the aggregate move upper bound
+was 198,195,640 bytes and the largest was 8,687,080 bytes.  The remaining
+calls correspond to initial allocation and geometric growth, rather than one
+allocator entry per appended monomial.  Exact source and logs are archived in
+`n3/hashfix_append_candidate_C14-7/`.
+
 ## Input-encoding equivalence
 
 The archived inputs encode every atom as a one-atom molecule whose molecule
@@ -121,6 +187,7 @@ files are retained verbatim so the exact executed inputs remain auditable.
 
 - `inputs/`: exact inputs copied to the execution node.
 - `n2/` and `n3/`: program stdout, perf CSV, GNU `time -v`, load snapshots,
-  completion metadata, and the later sampling snapshot.
+  completion metadata, the later sampling snapshot, and the same-host hash and
+  append-growth candidate runs.
 - `metadata/`: compiler, CPU, commit, build logs, and perf version.
 - `run_figenerator_order3_perf.sh`: exact runner used for the long `n=3` run.

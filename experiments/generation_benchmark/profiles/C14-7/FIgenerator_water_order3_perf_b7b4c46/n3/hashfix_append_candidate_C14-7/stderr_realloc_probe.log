@@ -1,0 +1,1 @@
+REALLOC_PROBE total_calls=6606 null_pointer_calls=1809 zero_size_calls=1 failed_calls=0 same_pointer_calls=2149 moved_calls=2647 growth_calls=4747 in_place_growth_calls=2100 moved_growth_calls=2647 moved_copy_upper_bound=198195640 largest_moved_copy_upper_bound=8687080

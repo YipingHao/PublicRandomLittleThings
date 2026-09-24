@@ -1,0 +1,23 @@
+Probe: experiments/generation_benchmark/realloc_probe.c
+Platform: C14-7, glibc, FIgenerator b7b4c46
+
+n=2, through order 3
+REALLOC_PROBE total_calls=205139 null_pointer_calls=1877 zero_size_calls=1 failed_calls=0 same_pointer_calls=199175 moved_calls=4086 growth_calls=147649 in_place_growth_calls=143563 moved_growth_calls=4086 moved_copy_upper_bound=8515008 largest_moved_copy_upper_bound=236152
+Generation order CPU-time sum (orders 2 through 3): 0.031900000 s
+
+n=2, through order 5
+REALLOC_PROBE total_calls=59988499 null_pointer_calls=362422 zero_size_calls=1 failed_calls=0 same_pointer_calls=59095971 moved_calls=530105 growth_calls=50065787 in_place_growth_calls=49535685 moved_growth_calls=530102 moved_copy_upper_bound=5599435092 largest_moved_copy_upper_bound=104574960
+Generation order CPU-time sum (orders 2 through 5): 17.387472000 s
+
+n=3, through order 3, SplitMix64-finalized hash candidate
+REALLOC_PROBE total_calls=13514181 null_pointer_calls=2077 zero_size_calls=1 failed_calls=0 same_pointer_calls=13505273 moved_calls=6830 growth_calls=9896611 in_place_growth_calls=9889781 moved_growth_calls=6830 moved_copy_upper_bound=435736728 largest_moved_copy_upper_bound=13188264
+Generation order CPU-time sum (orders 2 through 3): 4.705685000 s
+
+n=3, through order 3, finalized hash plus append-growth candidate
+REALLOC_PROBE total_calls=6606 null_pointer_calls=1809 zero_size_calls=1 failed_calls=0 same_pointer_calls=2149 moved_calls=2647 growth_calls=4747 in_place_growth_calls=2100 moved_growth_calls=2647 moved_copy_upper_bound=198195640 largest_moved_copy_upper_bound=8687080
+Generation order CPU-time sum (orders 2 through 3): 4.125921000 s
+
+Notes:
+- The interposer adds atomic-counter overhead, so the recorded CPU times are not baseline performance measurements.
+- moved_copy_upper_bound sums min(old_usable_size, requested_size) whenever realloc returned a different address.
+- glibc may service large reallocations with mremap; the byte totals are upper bounds on physical copies.

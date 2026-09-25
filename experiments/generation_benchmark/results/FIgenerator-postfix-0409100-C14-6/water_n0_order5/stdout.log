@@ -1,0 +1,176 @@
+=== Dictionary contents ===
+{
+	generation: {
+		MoleculeLabel: ["O",
+			"H",
+			"H"];
+		AtomLabel: ["O",
+			"H",
+			"H"];
+		MoleculeOfAtom: [1, 2, 3];
+		Order: 5;
+		Bond: true;
+		Angle: false;
+		Dihedral: false;
+		SequencePriority: true;
+		UseDoubleLinearSolver: true;
+	};
+	PrintSetting: {
+		PrintSetting: "None";
+		FIfileNamePrefix: "water_n0_FI.txt";
+		NonFIfileNamePrefix: "water_n0_PIP.txt";
+		PIPprintSetting: "None";
+	};
+}
+=== End of dictionary ===
+
+
+================= Parameter contents ==============
+=== parameter ===
+outputPath: /share/Hyper/experiments/generation_benchmark/FIgenerator-postfix-0409100-C14-6/water_n0_order5/output
+
+--- generation ---
+MoleculeLabel: O H H 
+AtomLabel: O H H 
+MoleculeOfAtom: 1 2 3 
+Order: 5
+Bond: true
+Angle: false
+Dihedral: false
+SequencePriority: true
+UseDoubleLinearSolver: true
+
+--- PrintSetting ---
+PrintSetting(raw): None
+PrintSetting(enum): None
+FIfileNamePrefix: water_n0_FI.txt
+NonFIfileNamePrefix: water_n0_PIP.txt
+PIPprintSetting(raw): None
+PIPprintSetting(enum): None
+FIfileName_fullPath: /share/Hyper/experiments/generation_benchmark/FIgenerator-postfix-0409100-C14-6/water_n0_order5/output/water_n0_FI.txt
+NonFIfileName_fullPath: /share/Hyper/experiments/generation_benchmark/FIgenerator-postfix-0409100-C14-6/water_n0_order5/output/water_n0_PIP.txt
+=== end ===
+==================== End of parameter ===============
+
+================= Check result =================
+=== CheckDemo ===
+MoleculeAmount = 3, Mkind = 2
+  M[0] kind=0 <O>  (kind count = 1)
+  M[1] kind=1 <H>  (kind count = 2)
+  M[2] kind=1 <H>  (kind count = 2)
+AtomAmount = 3, Akind = 2
+  A[0] kind=0 <O>  belong to M[0] <O>
+  A[1] kind=1 <H>  belong to M[1] <H>
+  A[2] kind=1 <H>  belong to M[2] <H>
+MaxAtomAmount = 1
+Formula [Mkind(2) x Akind(2)]:
+  Kind[0]:  AKind[0]=1  AKind[1]=0
+  Kind[1]:  AKind[0]=0  AKind[1]=1
+Matrix [MoleculeAmount(3) x MaxAtomAmount(1)]:
+  M[0] kind=0 <O> atoms=1:  A[0]<O>
+  M[1] kind=1 <H> atoms=1:  A[1]<H>
+  M[2] kind=1 <H> atoms=1:  A[2]<H>
+MaxAtomAmount = 1
+Formula [Mkind(2) x Akind(2)]:
+  Kind[0]:  AKind[0]=1  AKind[1]=0
+  Kind[1]:  AKind[0]=0  AKind[1]=1
+Matrix [MoleculeAmount(3) x MaxAtomAmount(1)]:
+  M[0] kind=0 <O> atoms=1:  A[0]<O>
+  M[1] kind=1 <H> atoms=1:  A[1]<H>
+  M[2] kind=1 <H> atoms=1:  A[2]<H>
+=== end CheckDemo ===
+=== End of check ===
+
+======== System Generator built successfully ===============
+Order = 5, AtomAmount = 3, SwapAmount = 0, PermutationAmount = 1
+SwapSet[0], length = 1
+	(1, 2) 
+============== End of system generator demo ===============
+
+======== Action and Representation built successfully ===============
+Order=5 AtomAmount=3 UseBond=1 UseAngle=0 UseDihedral=0
+BondAmount=3 AngleAmount=3 DihedralAmount=0 FeatureAmount=3 PermutationAmount=1
+Global Permutation block = [RPermutation, ThetaPermutation, DihedralPermutation]
+[Bond local index]
+  R[0] = (0,1)
+  R[1] = (0,2)
+  R[2] = (1,2)
+[Angle local index]
+  T[0] = <0,1,2> (global=3)
+  T[1] = <1,0,2> (global=4)
+  T[2] = <2,0,1> (global=5)
+[Dihedral local index]
+
+[Permutation Matrices]
+Total permutations: 1
+
+Permutation #0:
+  Bonds: r_{0,1}->r_{0,2}, r_{0,2}->r_{0,1}
+  Angles: theta^{1}_{0,2}->theta^{2}_{0,1}, theta^{2}_{0,1}->theta^{1}_{0,2}
+
+[Block Interaction Graph IndependentMat] (Order1Count=2, 1=direct edge/correlated, 0=no direct edge)
+     0  1 
+ 0:  1  0 
+ 1:  0  1 
+============== End of action and representation demo ===============
+
+======== Console initialized successfully ===============
+
+╔═══════════════════════════════════════════════════════════╗
+║  FI Generator Console Status                              ║
+╚═══════════════════════════════════════════════════════════╝
+Current Order: 1
+XYAmount (features): 3
+Total MonomialSets: 2
+
+Monomials by order:
+  Order 1: 2 monomials (2 generators)
+
+=== Order-1 Orbits (Order1Count=2) ===
+FeatureAmount (bond+angle+dihedral): 3
+  Bonds: 2, Angles: 0, Dihedrals: 0
+
+  Block No.0 [order=1, terms=2] (Bond)
+    features: 0, 1
+
+  Block No.1 [order=1, terms=1] (Bond)
+    features: 2
+
+============== End of console demo ===============
+
+======== Generating polynomials from order 2 to 5 ===============
+
+[Order 1]
+  Current order: FI=2, PIP=0, Total=2
+  Current lengths: FI=3, PIP=0, Total=3
+  Cumulative: FI=2, PIP=0, Total=2
+  Cumulative lengths: FI=3, PIP=0, Total=3
+
+[Order 2] (Time: 0.000000000 s = 0ms)
+  Current order: FI=1, PIP=3, Total=4
+  Current lengths: FI=2, PIP=10, Total=12
+  Cumulative: FI=3, PIP=3, Total=6
+  Cumulative lengths: FI=5, PIP=10, Total=15
+
+[Order 3] (Time: 0.000000000 s = 0ms)
+  Current order: FI=0, PIP=6, Total=6
+  Current lengths: FI=0, PIP=30, Total=30
+  Cumulative: FI=3, PIP=9, Total=12
+  Cumulative lengths: FI=5, PIP=40, Total=45
+
+[Order 4] (Time: 0.000000000 s = 0ms)
+  Current order: FI=0, PIP=9, Total=9
+  Current lengths: FI=0, PIP=60, Total=60
+  Cumulative: FI=3, PIP=18, Total=21
+  Cumulative lengths: FI=5, PIP=100, Total=105
+
+[Order 5] (Time: 0.000000000 s = 0ms)
+  Current order: FI=0, PIP=12, Total=12
+  Current lengths: FI=0, PIP=105, Total=105
+  Cumulative: FI=3, PIP=30, Total=33
+  Cumulative lengths: FI=5, PIP=205, Total=210
+
+Generation order CPU-time sum (orders 2 through 5): 0.000000000 s = 0ms
+  Scope: sum of the printed per-order console.Next() CPU times; order 1 and other program stages are excluded.
+
+======== Generation complete ===============

@@ -1,0 +1,29 @@
+make: Entering directory `/tmp/figenerator-postfix-0409100-20260924/source/tools'
+g++ -o ../obj/template.o -c -O2 -std=c++11 ../src/template.cpp
+g++ -o ../obj/dictionary.o -c -O2 -std=c++11 ../src/dictionary.cpp
+g++ -o ../obj/automata.o -c -O2 -std=c++11 ../src/automata.cpp
+g++ -o ../obj/FI_PIP.o -c -O2 -std=c++11 ../src/FI_PIP.cpp
+g++ -o ../obj/FIgenerator.o -c -O2 -std=c++11 ../src/FIgenerator.cpp
+g++ -o ../obj/polynomial.o -c -O2 -std=c++11 ../src/polynomial.cpp
+g++ -o ../obj/console.o -c -O2 -std=c++11 ../src/console.cpp
+g++ -o ../obj/PIPprinter.o -c -O2 -std=c++11 ../src/PIPprinter.cpp
+g++ -o ../obj/exact_number.o -c -O2 -std=c++11 ../src/exact_number.cpp
+g++ -o ../obj/exact_linear.o -c -O2 -std=c++11 ../src/exact_linear.cpp
+ar -rcv ../libFI.a ../obj/template.o ../obj/dictionary.o ../obj/automata.o ../obj/FI_PIP.o ../obj/FIgenerator.o ../obj/polynomial.o ../obj/console.o ../obj/PIPprinter.o ../obj/exact_number.o ../obj/exact_linear.o
+a - ../obj/template.o
+a - ../obj/dictionary.o
+a - ../obj/automata.o
+a - ../obj/FI_PIP.o
+a - ../obj/FIgenerator.o
+a - ../obj/polynomial.o
+a - ../obj/console.o
+a - ../obj/PIPprinter.o
+a - ../obj/exact_number.o
+a - ../obj/exact_linear.o
+make: Leaving directory `/tmp/figenerator-postfix-0409100-20260924/source/tools'
+make: Entering directory `/tmp/figenerator-postfix-0409100-20260924/source/tools'
+g++ -o ../exacutable/main.o -c -O2 -std=c++11 ../exacutable/main.cpp
+g++ -o ../exacutable/input.o -c -O2 -std=c++11 ../exacutable/input.cpp
+g++ -o ../exacutable/test.o -c -O2 -std=c++11 ../exacutable/test.cpp
+g++ -o ../Pikaqiu.exe ../obj/template.o ../obj/dictionary.o ../obj/automata.o ../obj/FI_PIP.o ../obj/FIgenerator.o ../obj/polynomial.o ../obj/console.o ../obj/PIPprinter.o ../obj/exact_number.o ../obj/exact_linear.o ../exacutable/main.o ../exacutable/input.o ../exacutable/test.o
+make: Leaving directory `/tmp/figenerator-postfix-0409100-20260924/source/tools'

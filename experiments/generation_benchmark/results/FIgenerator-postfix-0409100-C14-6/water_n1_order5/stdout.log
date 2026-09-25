@@ -1,0 +1,379 @@
+=== Dictionary contents ===
+{
+	generation: {
+		MoleculeLabel: ["O",
+			"O",
+			"H",
+			"H",
+			"H",
+			"H"];
+		AtomLabel: ["O",
+			"O",
+			"H",
+			"H",
+			"H",
+			"H"];
+		MoleculeOfAtom: [1, 2, 3, 4, 5, 6];
+		Order: 5;
+		Bond: true;
+		Angle: false;
+		Dihedral: false;
+		SequencePriority: true;
+		UseDoubleLinearSolver: true;
+	};
+	PrintSetting: {
+		PrintSetting: "None";
+		FIfileNamePrefix: "water_n1_FI.txt";
+		NonFIfileNamePrefix: "water_n1_PIP.txt";
+		PIPprintSetting: "None";
+	};
+}
+=== End of dictionary ===
+
+
+================= Parameter contents ==============
+=== parameter ===
+outputPath: /share/Hyper/experiments/generation_benchmark/FIgenerator-postfix-0409100-C14-6/water_n1_order5/output
+
+--- generation ---
+MoleculeLabel: O O H H H H 
+AtomLabel: O O H H H H 
+MoleculeOfAtom: 1 2 3 4 5 6 
+Order: 5
+Bond: true
+Angle: false
+Dihedral: false
+SequencePriority: true
+UseDoubleLinearSolver: true
+
+--- PrintSetting ---
+PrintSetting(raw): None
+PrintSetting(enum): None
+FIfileNamePrefix: water_n1_FI.txt
+NonFIfileNamePrefix: water_n1_PIP.txt
+PIPprintSetting(raw): None
+PIPprintSetting(enum): None
+FIfileName_fullPath: /share/Hyper/experiments/generation_benchmark/FIgenerator-postfix-0409100-C14-6/water_n1_order5/output/water_n1_FI.txt
+NonFIfileName_fullPath: /share/Hyper/experiments/generation_benchmark/FIgenerator-postfix-0409100-C14-6/water_n1_order5/output/water_n1_PIP.txt
+=== end ===
+==================== End of parameter ===============
+
+================= Check result =================
+=== CheckDemo ===
+MoleculeAmount = 6, Mkind = 2
+  M[0] kind=0 <O>  (kind count = 2)
+  M[1] kind=0 <O>  (kind count = 2)
+  M[2] kind=1 <H>  (kind count = 4)
+  M[3] kind=1 <H>  (kind count = 4)
+  M[4] kind=1 <H>  (kind count = 4)
+  M[5] kind=1 <H>  (kind count = 4)
+AtomAmount = 6, Akind = 2
+  A[0] kind=0 <O>  belong to M[0] <O>
+  A[1] kind=0 <O>  belong to M[1] <O>
+  A[2] kind=1 <H>  belong to M[2] <H>
+  A[3] kind=1 <H>  belong to M[3] <H>
+  A[4] kind=1 <H>  belong to M[4] <H>
+  A[5] kind=1 <H>  belong to M[5] <H>
+MaxAtomAmount = 1
+Formula [Mkind(2) x Akind(2)]:
+  Kind[0]:  AKind[0]=1  AKind[1]=0
+  Kind[1]:  AKind[0]=0  AKind[1]=1
+Matrix [MoleculeAmount(6) x MaxAtomAmount(1)]:
+  M[0] kind=0 <O> atoms=1:  A[0]<O>
+  M[1] kind=0 <O> atoms=1:  A[1]<O>
+  M[2] kind=1 <H> atoms=1:  A[2]<H>
+  M[3] kind=1 <H> atoms=1:  A[3]<H>
+  M[4] kind=1 <H> atoms=1:  A[4]<H>
+  M[5] kind=1 <H> atoms=1:  A[5]<H>
+MaxAtomAmount = 1
+Formula [Mkind(2) x Akind(2)]:
+  Kind[0]:  AKind[0]=1  AKind[1]=0
+  Kind[1]:  AKind[0]=0  AKind[1]=1
+Matrix [MoleculeAmount(6) x MaxAtomAmount(1)]:
+  M[0] kind=0 <O> atoms=1:  A[0]<O>
+  M[1] kind=0 <O> atoms=1:  A[1]<O>
+  M[2] kind=1 <H> atoms=1:  A[2]<H>
+  M[3] kind=1 <H> atoms=1:  A[3]<H>
+  M[4] kind=1 <H> atoms=1:  A[4]<H>
+  M[5] kind=1 <H> atoms=1:  A[5]<H>
+=== end CheckDemo ===
+=== End of check ===
+
+======== System Generator built successfully ===============
+Order = 5, AtomAmount = 6, SwapAmount = 0, PermutationAmount = 4
+SwapSet[0], length = 1
+	(0, 1) 
+SwapSet[1], length = 1
+	(2, 3) 
+SwapSet[2], length = 1
+	(2, 4) 
+SwapSet[3], length = 1
+	(2, 5) 
+============== End of system generator demo ===============
+
+======== Action and Representation built successfully ===============
+Order=5 AtomAmount=6 UseBond=1 UseAngle=0 UseDihedral=0
+BondAmount=15 AngleAmount=60 DihedralAmount=90 FeatureAmount=15 PermutationAmount=4
+Global Permutation block = [RPermutation, ThetaPermutation, DihedralPermutation]
+[Bond local index]
+  R[0] = (0,1)
+  R[1] = (0,2)
+  R[2] = (0,3)
+  R[3] = (0,4)
+  R[4] = (0,5)
+  R[5] = (1,2)
+  R[6] = (1,3)
+  R[7] = (1,4)
+  R[8] = (1,5)
+  R[9] = (2,3)
+  R[10] = (2,4)
+  R[11] = (2,5)
+  R[12] = (3,4)
+  R[13] = (3,5)
+  R[14] = (4,5)
+[Angle local index]
+  T[0] = <0,1,2> (global=15)
+  T[1] = <0,1,3> (global=16)
+  T[2] = <0,1,4> (global=17)
+  T[3] = <0,1,5> (global=18)
+  T[4] = <0,2,3> (global=19)
+  T[5] = <0,2,4> (global=20)
+  T[6] = <0,2,5> (global=21)
+  T[7] = <0,3,4> (global=22)
+  T[8] = <0,3,5> (global=23)
+  T[9] = <0,4,5> (global=24)
+  T[10] = <1,0,2> (global=25)
+  T[11] = <1,0,3> (global=26)
+  T[12] = <1,0,4> (global=27)
+  T[13] = <1,0,5> (global=28)
+  T[14] = <1,2,3> (global=29)
+  T[15] = <1,2,4> (global=30)
+  T[16] = <1,2,5> (global=31)
+  T[17] = <1,3,4> (global=32)
+  T[18] = <1,3,5> (global=33)
+  T[19] = <1,4,5> (global=34)
+  T[20] = <2,0,1> (global=35)
+  T[21] = <2,0,3> (global=36)
+  T[22] = <2,0,4> (global=37)
+  T[23] = <2,0,5> (global=38)
+  T[24] = <2,1,3> (global=39)
+  T[25] = <2,1,4> (global=40)
+  T[26] = <2,1,5> (global=41)
+  T[27] = <2,3,4> (global=42)
+  T[28] = <2,3,5> (global=43)
+  T[29] = <2,4,5> (global=44)
+  T[30] = <3,0,1> (global=45)
+  T[31] = <3,0,2> (global=46)
+  T[32] = <3,0,4> (global=47)
+  T[33] = <3,0,5> (global=48)
+  T[34] = <3,1,2> (global=49)
+  T[35] = <3,1,4> (global=50)
+  T[36] = <3,1,5> (global=51)
+  T[37] = <3,2,4> (global=52)
+  T[38] = <3,2,5> (global=53)
+  T[39] = <3,4,5> (global=54)
+  T[40] = <4,0,1> (global=55)
+  T[41] = <4,0,2> (global=56)
+  T[42] = <4,0,3> (global=57)
+  T[43] = <4,0,5> (global=58)
+  T[44] = <4,1,2> (global=59)
+  T[45] = <4,1,3> (global=60)
+  T[46] = <4,1,5> (global=61)
+  T[47] = <4,2,3> (global=62)
+  T[48] = <4,2,5> (global=63)
+  T[49] = <4,3,5> (global=64)
+  T[50] = <5,0,1> (global=65)
+  T[51] = <5,0,2> (global=66)
+  T[52] = <5,0,3> (global=67)
+  T[53] = <5,0,4> (global=68)
+  T[54] = <5,1,2> (global=69)
+  T[55] = <5,1,3> (global=70)
+  T[56] = <5,1,4> (global=71)
+  T[57] = <5,2,3> (global=72)
+  T[58] = <5,2,4> (global=73)
+  T[59] = <5,3,4> (global=74)
+[Dihedral local index]
+  D[0] = center<0,1> endpoint<2,3> (global=15)
+  D[1] = center<0,1> endpoint<2,4> (global=16)
+  D[2] = center<0,1> endpoint<2,5> (global=17)
+  D[3] = center<0,1> endpoint<3,4> (global=18)
+  D[4] = center<0,1> endpoint<3,5> (global=19)
+  D[5] = center<0,1> endpoint<4,5> (global=20)
+  D[6] = center<0,2> endpoint<1,3> (global=21)
+  D[7] = center<0,2> endpoint<1,4> (global=22)
+  D[8] = center<0,2> endpoint<1,5> (global=23)
+  D[9] = center<0,2> endpoint<3,4> (global=24)
+  D[10] = center<0,2> endpoint<3,5> (global=25)
+  D[11] = center<0,2> endpoint<4,5> (global=26)
+  D[12] = center<0,3> endpoint<1,2> (global=27)
+  D[13] = center<0,3> endpoint<1,4> (global=28)
+  D[14] = center<0,3> endpoint<1,5> (global=29)
+  D[15] = center<0,3> endpoint<2,4> (global=30)
+  D[16] = center<0,3> endpoint<2,5> (global=31)
+  D[17] = center<0,3> endpoint<4,5> (global=32)
+  D[18] = center<0,4> endpoint<1,2> (global=33)
+  D[19] = center<0,4> endpoint<1,3> (global=34)
+  D[20] = center<0,4> endpoint<1,5> (global=35)
+  D[21] = center<0,4> endpoint<2,3> (global=36)
+  D[22] = center<0,4> endpoint<2,5> (global=37)
+  D[23] = center<0,4> endpoint<3,5> (global=38)
+  D[24] = center<0,5> endpoint<1,2> (global=39)
+  D[25] = center<0,5> endpoint<1,3> (global=40)
+  D[26] = center<0,5> endpoint<1,4> (global=41)
+  D[27] = center<0,5> endpoint<2,3> (global=42)
+  D[28] = center<0,5> endpoint<2,4> (global=43)
+  D[29] = center<0,5> endpoint<3,4> (global=44)
+  D[30] = center<1,2> endpoint<0,3> (global=45)
+  D[31] = center<1,2> endpoint<0,4> (global=46)
+  D[32] = center<1,2> endpoint<0,5> (global=47)
+  D[33] = center<1,2> endpoint<3,4> (global=48)
+  D[34] = center<1,2> endpoint<3,5> (global=49)
+  D[35] = center<1,2> endpoint<4,5> (global=50)
+  D[36] = center<1,3> endpoint<0,2> (global=51)
+  D[37] = center<1,3> endpoint<0,4> (global=52)
+  D[38] = center<1,3> endpoint<0,5> (global=53)
+  D[39] = center<1,3> endpoint<2,4> (global=54)
+  D[40] = center<1,3> endpoint<2,5> (global=55)
+  D[41] = center<1,3> endpoint<4,5> (global=56)
+  D[42] = center<1,4> endpoint<0,2> (global=57)
+  D[43] = center<1,4> endpoint<0,3> (global=58)
+  D[44] = center<1,4> endpoint<0,5> (global=59)
+  D[45] = center<1,4> endpoint<2,3> (global=60)
+  D[46] = center<1,4> endpoint<2,5> (global=61)
+  D[47] = center<1,4> endpoint<3,5> (global=62)
+  D[48] = center<1,5> endpoint<0,2> (global=63)
+  D[49] = center<1,5> endpoint<0,3> (global=64)
+  D[50] = center<1,5> endpoint<0,4> (global=65)
+  D[51] = center<1,5> endpoint<2,3> (global=66)
+  D[52] = center<1,5> endpoint<2,4> (global=67)
+  D[53] = center<1,5> endpoint<3,4> (global=68)
+  D[54] = center<2,3> endpoint<0,1> (global=69)
+  D[55] = center<2,3> endpoint<0,4> (global=70)
+  D[56] = center<2,3> endpoint<0,5> (global=71)
+  D[57] = center<2,3> endpoint<1,4> (global=72)
+  D[58] = center<2,3> endpoint<1,5> (global=73)
+  D[59] = center<2,3> endpoint<4,5> (global=74)
+  D[60] = center<2,4> endpoint<0,1> (global=75)
+  D[61] = center<2,4> endpoint<0,3> (global=76)
+  D[62] = center<2,4> endpoint<0,5> (global=77)
+  D[63] = center<2,4> endpoint<1,3> (global=78)
+  D[64] = center<2,4> endpoint<1,5> (global=79)
+  D[65] = center<2,4> endpoint<3,5> (global=80)
+  D[66] = center<2,5> endpoint<0,1> (global=81)
+  D[67] = center<2,5> endpoint<0,3> (global=82)
+  D[68] = center<2,5> endpoint<0,4> (global=83)
+  D[69] = center<2,5> endpoint<1,3> (global=84)
+  D[70] = center<2,5> endpoint<1,4> (global=85)
+  D[71] = center<2,5> endpoint<3,4> (global=86)
+  D[72] = center<3,4> endpoint<0,1> (global=87)
+  D[73] = center<3,4> endpoint<0,2> (global=88)
+  D[74] = center<3,4> endpoint<0,5> (global=89)
+  D[75] = center<3,4> endpoint<1,2> (global=90)
+  D[76] = center<3,4> endpoint<1,5> (global=91)
+  D[77] = center<3,4> endpoint<2,5> (global=92)
+  D[78] = center<3,5> endpoint<0,1> (global=93)
+  D[79] = center<3,5> endpoint<0,2> (global=94)
+  D[80] = center<3,5> endpoint<0,4> (global=95)
+  D[81] = center<3,5> endpoint<1,2> (global=96)
+  D[82] = center<3,5> endpoint<1,4> (global=97)
+  D[83] = center<3,5> endpoint<2,4> (global=98)
+  D[84] = center<4,5> endpoint<0,1> (global=99)
+  D[85] = center<4,5> endpoint<0,2> (global=100)
+  D[86] = center<4,5> endpoint<0,3> (global=101)
+  D[87] = center<4,5> endpoint<1,2> (global=102)
+  D[88] = center<4,5> endpoint<1,3> (global=103)
+  D[89] = center<4,5> endpoint<2,3> (global=104)
+
+[Permutation Matrices]
+Total permutations: 4
+
+Permutation #0:
+  Bonds: r_{0,2}->r_{1,2}, r_{0,3}->r_{1,3}, r_{0,4}->r_{1,4}, r_{0,5}->r_{1,5}, r_{1,2}->r_{0,2}, r_{1,3}->r_{0,3}, r_{1,4}->r_{0,4}, r_{1,5}->r_{0,5}
+  Angles: theta^{0}_{1,2}->theta^{1}_{0,2}, theta^{0}_{1,3}->theta^{1}_{0,3}, theta^{0}_{1,4}->theta^{1}_{0,4}, theta^{0}_{1,5}->theta^{1}_{0,5}, theta^{0}_{2,3}->theta^{1}_{2,3}, theta^{0}_{2,4}->theta^{1}_{2,4}, theta^{0}_{2,5}->theta^{1}_{2,5}, theta^{0}_{3,4}->theta^{1}_{3,4}, theta^{0}_{3,5}->theta^{1}_{3,5}, theta^{0}_{4,5}->theta^{1}_{4,5}, theta^{1}_{0,2}->theta^{0}_{1,2}, theta^{1}_{0,3}->theta^{0}_{1,3}, theta^{1}_{0,4}->theta^{0}_{1,4}, theta^{1}_{0,5}->theta^{0}_{1,5}, theta^{1}_{2,3}->theta^{0}_{2,3}, theta^{1}_{2,4}->theta^{0}_{2,4}, theta^{1}_{2,5}->theta^{0}_{2,5}, theta^{1}_{3,4}->theta^{0}_{3,4}, theta^{1}_{3,5}->theta^{0}_{3,5}, theta^{1}_{4,5}->theta^{0}_{4,5}, theta^{2}_{0,3}->theta^{2}_{1,3}, theta^{2}_{0,4}->theta^{2}_{1,4}, theta^{2}_{0,5}->theta^{2}_{1,5}, theta^{2}_{1,3}->theta^{2}_{0,3}, theta^{2}_{1,4}->theta^{2}_{0,4}, theta^{2}_{1,5}->theta^{2}_{0,5}, theta^{3}_{0,2}->theta^{3}_{1,2}, theta^{3}_{0,4}->theta^{3}_{1,4}, theta^{3}_{0,5}->theta^{3}_{1,5}, theta^{3}_{1,2}->theta^{3}_{0,2}, theta^{3}_{1,4}->theta^{3}_{0,4}, theta^{3}_{1,5}->theta^{3}_{0,5}, theta^{4}_{0,2}->theta^{4}_{1,2}, theta^{4}_{0,3}->theta^{4}_{1,3}, theta^{4}_{0,5}->theta^{4}_{1,5}, theta^{4}_{1,2}->theta^{4}_{0,2}, theta^{4}_{1,3}->theta^{4}_{0,3}, theta^{4}_{1,5}->theta^{4}_{0,5}, theta^{5}_{0,2}->theta^{5}_{1,2}, theta^{5}_{0,3}->theta^{5}_{1,3}, theta^{5}_{0,4}->theta^{5}_{1,4}, theta^{5}_{1,2}->theta^{5}_{0,2}, theta^{5}_{1,3}->theta^{5}_{0,3}, theta^{5}_{1,4}->theta^{5}_{0,4}
+  Dihedrals: d_{0,2,1,3}->d_{1,2,0,3}, d_{0,2,1,4}->d_{1,2,0,4}, d_{0,2,1,5}->d_{1,2,0,5}, d_{0,2,3,4}->d_{1,2,3,4}, d_{0,2,3,5}->d_{1,2,3,5}, d_{0,2,4,5}->d_{1,2,4,5}, d_{0,3,1,2}->d_{1,3,0,2}, d_{0,3,1,4}->d_{1,3,0,4}, d_{0,3,1,5}->d_{1,3,0,5}, d_{0,3,2,4}->d_{1,3,2,4}, d_{0,3,2,5}->d_{1,3,2,5}, d_{0,3,4,5}->d_{1,3,4,5}, d_{0,4,1,2}->d_{1,4,0,2}, d_{0,4,1,3}->d_{1,4,0,3}, d_{0,4,1,5}->d_{1,4,0,5}, d_{0,4,2,3}->d_{1,4,2,3}, d_{0,4,2,5}->d_{1,4,2,5}, d_{0,4,3,5}->d_{1,4,3,5}, d_{0,5,1,2}->d_{1,5,0,2}, d_{0,5,1,3}->d_{1,5,0,3}, d_{0,5,1,4}->d_{1,5,0,4}, d_{0,5,2,3}->d_{1,5,2,3}, d_{0,5,2,4}->d_{1,5,2,4}, d_{0,5,3,4}->d_{1,5,3,4}, d_{1,2,0,3}->d_{0,2,1,3}, d_{1,2,0,4}->d_{0,2,1,4}, d_{1,2,0,5}->d_{0,2,1,5}, d_{1,2,3,4}->d_{0,2,3,4}, d_{1,2,3,5}->d_{0,2,3,5}, d_{1,2,4,5}->d_{0,2,4,5}, d_{1,3,0,2}->d_{0,3,1,2}, d_{1,3,0,4}->d_{0,3,1,4}, d_{1,3,0,5}->d_{0,3,1,5}, d_{1,3,2,4}->d_{0,3,2,4}, d_{1,3,2,5}->d_{0,3,2,5}, d_{1,3,4,5}->d_{0,3,4,5}, d_{1,4,0,2}->d_{0,4,1,2}, d_{1,4,0,3}->d_{0,4,1,3}, d_{1,4,0,5}->d_{0,4,1,5}, d_{1,4,2,3}->d_{0,4,2,3}, d_{1,4,2,5}->d_{0,4,2,5}, d_{1,4,3,5}->d_{0,4,3,5}, d_{1,5,0,2}->d_{0,5,1,2}, d_{1,5,0,3}->d_{0,5,1,3}, d_{1,5,0,4}->d_{0,5,1,4}, d_{1,5,2,3}->d_{0,5,2,3}, d_{1,5,2,4}->d_{0,5,2,4}, d_{1,5,3,4}->d_{0,5,3,4}, d_{2,3,0,4}->d_{2,3,1,4}, d_{2,3,0,5}->d_{2,3,1,5}, d_{2,3,1,4}->d_{2,3,0,4}, d_{2,3,1,5}->d_{2,3,0,5}, d_{2,4,0,3}->d_{2,4,1,3}, d_{2,4,0,5}->d_{2,4,1,5}, d_{2,4,1,3}->d_{2,4,0,3}, d_{2,4,1,5}->d_{2,4,0,5}, d_{2,5,0,3}->d_{2,5,1,3}, d_{2,5,0,4}->d_{2,5,1,4}, d_{2,5,1,3}->d_{2,5,0,3}, d_{2,5,1,4}->d_{2,5,0,4}, d_{3,4,0,2}->d_{3,4,1,2}, d_{3,4,0,5}->d_{3,4,1,5}, d_{3,4,1,2}->d_{3,4,0,2}, d_{3,4,1,5}->d_{3,4,0,5}, d_{3,5,0,2}->d_{3,5,1,2}, d_{3,5,0,4}->d_{3,5,1,4}, d_{3,5,1,2}->d_{3,5,0,2}, d_{3,5,1,4}->d_{3,5,0,4}, d_{4,5,0,2}->d_{4,5,1,2}, d_{4,5,0,3}->d_{4,5,1,3}, d_{4,5,1,2}->d_{4,5,0,2}, d_{4,5,1,3}->d_{4,5,0,3}
+
+Permutation #1:
+  Bonds: r_{0,2}->r_{0,3}, r_{0,3}->r_{0,2}, r_{1,2}->r_{1,3}, r_{1,3}->r_{1,2}, r_{2,4}->r_{3,4}, r_{2,5}->r_{3,5}, r_{3,4}->r_{2,4}, r_{3,5}->r_{2,5}
+  Angles: theta^{0}_{1,2}->theta^{0}_{1,3}, theta^{0}_{1,3}->theta^{0}_{1,2}, theta^{0}_{2,4}->theta^{0}_{3,4}, theta^{0}_{2,5}->theta^{0}_{3,5}, theta^{0}_{3,4}->theta^{0}_{2,4}, theta^{0}_{3,5}->theta^{0}_{2,5}, theta^{1}_{0,2}->theta^{1}_{0,3}, theta^{1}_{0,3}->theta^{1}_{0,2}, theta^{1}_{2,4}->theta^{1}_{3,4}, theta^{1}_{2,5}->theta^{1}_{3,5}, theta^{1}_{3,4}->theta^{1}_{2,4}, theta^{1}_{3,5}->theta^{1}_{2,5}, theta^{2}_{0,1}->theta^{3}_{0,1}, theta^{2}_{0,3}->theta^{3}_{0,2}, theta^{2}_{0,4}->theta^{3}_{0,4}, theta^{2}_{0,5}->theta^{3}_{0,5}, theta^{2}_{1,3}->theta^{3}_{1,2}, theta^{2}_{1,4}->theta^{3}_{1,4}, theta^{2}_{1,5}->theta^{3}_{1,5}, theta^{2}_{3,4}->theta^{3}_{2,4}, theta^{2}_{3,5}->theta^{3}_{2,5}, theta^{2}_{4,5}->theta^{3}_{4,5}, theta^{3}_{0,1}->theta^{2}_{0,1}, theta^{3}_{0,2}->theta^{2}_{0,3}, theta^{3}_{0,4}->theta^{2}_{0,4}, theta^{3}_{0,5}->theta^{2}_{0,5}, theta^{3}_{1,2}->theta^{2}_{1,3}, theta^{3}_{1,4}->theta^{2}_{1,4}, theta^{3}_{1,5}->theta^{2}_{1,5}, theta^{3}_{2,4}->theta^{2}_{3,4}, theta^{3}_{2,5}->theta^{2}_{3,5}, theta^{3}_{4,5}->theta^{2}_{4,5}, theta^{4}_{0,2}->theta^{4}_{0,3}, theta^{4}_{0,3}->theta^{4}_{0,2}, theta^{4}_{1,2}->theta^{4}_{1,3}, theta^{4}_{1,3}->theta^{4}_{1,2}, theta^{4}_{2,5}->theta^{4}_{3,5}, theta^{4}_{3,5}->theta^{4}_{2,5}, theta^{5}_{0,2}->theta^{5}_{0,3}, theta^{5}_{0,3}->theta^{5}_{0,2}, theta^{5}_{1,2}->theta^{5}_{1,3}, theta^{5}_{1,3}->theta^{5}_{1,2}, theta^{5}_{2,4}->theta^{5}_{3,4}, theta^{5}_{3,4}->theta^{5}_{2,4}
+  Dihedrals: d_{0,1,2,4}->d_{0,1,3,4}, d_{0,1,2,5}->d_{0,1,3,5}, d_{0,1,3,4}->d_{0,1,2,4}, d_{0,1,3,5}->d_{0,1,2,5}, d_{0,2,1,3}->d_{0,3,1,2}, d_{0,2,1,4}->d_{0,3,1,4}, d_{0,2,1,5}->d_{0,3,1,5}, d_{0,2,3,4}->d_{0,3,2,4}, d_{0,2,3,5}->d_{0,3,2,5}, d_{0,2,4,5}->d_{0,3,4,5}, d_{0,3,1,2}->d_{0,2,1,3}, d_{0,3,1,4}->d_{0,2,1,4}, d_{0,3,1,5}->d_{0,2,1,5}, d_{0,3,2,4}->d_{0,2,3,4}, d_{0,3,2,5}->d_{0,2,3,5}, d_{0,3,4,5}->d_{0,2,4,5}, d_{0,4,1,2}->d_{0,4,1,3}, d_{0,4,1,3}->d_{0,4,1,2}, d_{0,4,2,5}->d_{0,4,3,5}, d_{0,4,3,5}->d_{0,4,2,5}, d_{0,5,1,2}->d_{0,5,1,3}, d_{0,5,1,3}->d_{0,5,1,2}, d_{0,5,2,4}->d_{0,5,3,4}, d_{0,5,3,4}->d_{0,5,2,4}, d_{1,2,0,3}->d_{1,3,0,2}, d_{1,2,0,4}->d_{1,3,0,4}, d_{1,2,0,5}->d_{1,3,0,5}, d_{1,2,3,4}->d_{1,3,2,4}, d_{1,2,3,5}->d_{1,3,2,5}, d_{1,2,4,5}->d_{1,3,4,5}, d_{1,3,0,2}->d_{1,2,0,3}, d_{1,3,0,4}->d_{1,2,0,4}, d_{1,3,0,5}->d_{1,2,0,5}, d_{1,3,2,4}->d_{1,2,3,4}, d_{1,3,2,5}->d_{1,2,3,5}, d_{1,3,4,5}->d_{1,2,4,5}, d_{1,4,0,2}->d_{1,4,0,3}, d_{1,4,0,3}->d_{1,4,0,2}, d_{1,4,2,5}->d_{1,4,3,5}, d_{1,4,3,5}->d_{1,4,2,5}, d_{1,5,0,2}->d_{1,5,0,3}, d_{1,5,0,3}->d_{1,5,0,2}, d_{1,5,2,4}->d_{1,5,3,4}, d_{1,5,3,4}->d_{1,5,2,4}, d_{2,4,0,1}->d_{3,4,0,1}, d_{2,4,0,3}->d_{3,4,0,2}, d_{2,4,0,5}->d_{3,4,0,5}, d_{2,4,1,3}->d_{3,4,1,2}, d_{2,4,1,5}->d_{3,4,1,5}, d_{2,4,3,5}->d_{3,4,2,5}, d_{2,5,0,1}->d_{3,5,0,1}, d_{2,5,0,3}->d_{3,5,0,2}, d_{2,5,0,4}->d_{3,5,0,4}, d_{2,5,1,3}->d_{3,5,1,2}, d_{2,5,1,4}->d_{3,5,1,4}, d_{2,5,3,4}->d_{3,5,2,4}, d_{3,4,0,1}->d_{2,4,0,1}, d_{3,4,0,2}->d_{2,4,0,3}, d_{3,4,0,5}->d_{2,4,0,5}, d_{3,4,1,2}->d_{2,4,1,3}, d_{3,4,1,5}->d_{2,4,1,5}, d_{3,4,2,5}->d_{2,4,3,5}, d_{3,5,0,1}->d_{2,5,0,1}, d_{3,5,0,2}->d_{2,5,0,3}, d_{3,5,0,4}->d_{2,5,0,4}, d_{3,5,1,2}->d_{2,5,1,3}, d_{3,5,1,4}->d_{2,5,1,4}, d_{3,5,2,4}->d_{2,5,3,4}, d_{4,5,0,2}->d_{4,5,0,3}, d_{4,5,0,3}->d_{4,5,0,2}, d_{4,5,1,2}->d_{4,5,1,3}, d_{4,5,1,3}->d_{4,5,1,2}
+
+Permutation #2:
+  Bonds: r_{0,2}->r_{0,4}, r_{0,4}->r_{0,2}, r_{1,2}->r_{1,4}, r_{1,4}->r_{1,2}, r_{2,3}->r_{3,4}, r_{2,5}->r_{4,5}, r_{3,4}->r_{2,3}, r_{4,5}->r_{2,5}
+  Angles: theta^{0}_{1,2}->theta^{0}_{1,4}, theta^{0}_{1,4}->theta^{0}_{1,2}, theta^{0}_{2,3}->theta^{0}_{3,4}, theta^{0}_{2,5}->theta^{0}_{4,5}, theta^{0}_{3,4}->theta^{0}_{2,3}, theta^{0}_{4,5}->theta^{0}_{2,5}, theta^{1}_{0,2}->theta^{1}_{0,4}, theta^{1}_{0,4}->theta^{1}_{0,2}, theta^{1}_{2,3}->theta^{1}_{3,4}, theta^{1}_{2,5}->theta^{1}_{4,5}, theta^{1}_{3,4}->theta^{1}_{2,3}, theta^{1}_{4,5}->theta^{1}_{2,5}, theta^{2}_{0,1}->theta^{4}_{0,1}, theta^{2}_{0,3}->theta^{4}_{0,3}, theta^{2}_{0,4}->theta^{4}_{0,2}, theta^{2}_{0,5}->theta^{4}_{0,5}, theta^{2}_{1,3}->theta^{4}_{1,3}, theta^{2}_{1,4}->theta^{4}_{1,2}, theta^{2}_{1,5}->theta^{4}_{1,5}, theta^{2}_{3,4}->theta^{4}_{2,3}, theta^{2}_{3,5}->theta^{4}_{3,5}, theta^{2}_{4,5}->theta^{4}_{2,5}, theta^{3}_{0,2}->theta^{3}_{0,4}, theta^{3}_{0,4}->theta^{3}_{0,2}, theta^{3}_{1,2}->theta^{3}_{1,4}, theta^{3}_{1,4}->theta^{3}_{1,2}, theta^{3}_{2,5}->theta^{3}_{4,5}, theta^{3}_{4,5}->theta^{3}_{2,5}, theta^{4}_{0,1}->theta^{2}_{0,1}, theta^{4}_{0,2}->theta^{2}_{0,4}, theta^{4}_{0,3}->theta^{2}_{0,3}, theta^{4}_{0,5}->theta^{2}_{0,5}, theta^{4}_{1,2}->theta^{2}_{1,4}, theta^{4}_{1,3}->theta^{2}_{1,3}, theta^{4}_{1,5}->theta^{2}_{1,5}, theta^{4}_{2,3}->theta^{2}_{3,4}, theta^{4}_{2,5}->theta^{2}_{4,5}, theta^{4}_{3,5}->theta^{2}_{3,5}, theta^{5}_{0,2}->theta^{5}_{0,4}, theta^{5}_{0,4}->theta^{5}_{0,2}, theta^{5}_{1,2}->theta^{5}_{1,4}, theta^{5}_{1,4}->theta^{5}_{1,2}, theta^{5}_{2,3}->theta^{5}_{3,4}, theta^{5}_{3,4}->theta^{5}_{2,3}
+  Dihedrals: d_{0,1,2,3}->d_{0,1,3,4}, d_{0,1,2,5}->d_{0,1,4,5}, d_{0,1,3,4}->d_{0,1,2,3}, d_{0,1,4,5}->d_{0,1,2,5}, d_{0,2,1,3}->d_{0,4,1,3}, d_{0,2,1,4}->d_{0,4,1,2}, d_{0,2,1,5}->d_{0,4,1,5}, d_{0,2,3,4}->d_{0,4,2,3}, d_{0,2,3,5}->d_{0,4,3,5}, d_{0,2,4,5}->d_{0,4,2,5}, d_{0,3,1,2}->d_{0,3,1,4}, d_{0,3,1,4}->d_{0,3,1,2}, d_{0,3,2,5}->d_{0,3,4,5}, d_{0,3,4,5}->d_{0,3,2,5}, d_{0,4,1,2}->d_{0,2,1,4}, d_{0,4,1,3}->d_{0,2,1,3}, d_{0,4,1,5}->d_{0,2,1,5}, d_{0,4,2,3}->d_{0,2,3,4}, d_{0,4,2,5}->d_{0,2,4,5}, d_{0,4,3,5}->d_{0,2,3,5}, d_{0,5,1,2}->d_{0,5,1,4}, d_{0,5,1,4}->d_{0,5,1,2}, d_{0,5,2,3}->d_{0,5,3,4}, d_{0,5,3,4}->d_{0,5,2,3}, d_{1,2,0,3}->d_{1,4,0,3}, d_{1,2,0,4}->d_{1,4,0,2}, d_{1,2,0,5}->d_{1,4,0,5}, d_{1,2,3,4}->d_{1,4,2,3}, d_{1,2,3,5}->d_{1,4,3,5}, d_{1,2,4,5}->d_{1,4,2,5}, d_{1,3,0,2}->d_{1,3,0,4}, d_{1,3,0,4}->d_{1,3,0,2}, d_{1,3,2,5}->d_{1,3,4,5}, d_{1,3,4,5}->d_{1,3,2,5}, d_{1,4,0,2}->d_{1,2,0,4}, d_{1,4,0,3}->d_{1,2,0,3}, d_{1,4,0,5}->d_{1,2,0,5}, d_{1,4,2,3}->d_{1,2,3,4}, d_{1,4,2,5}->d_{1,2,4,5}, d_{1,4,3,5}->d_{1,2,3,5}, d_{1,5,0,2}->d_{1,5,0,4}, d_{1,5,0,4}->d_{1,5,0,2}, d_{1,5,2,3}->d_{1,5,3,4}, d_{1,5,3,4}->d_{1,5,2,3}, d_{2,3,0,1}->d_{3,4,0,1}, d_{2,3,0,4}->d_{3,4,0,2}, d_{2,3,0,5}->d_{3,4,0,5}, d_{2,3,1,4}->d_{3,4,1,2}, d_{2,3,1,5}->d_{3,4,1,5}, d_{2,3,4,5}->d_{3,4,2,5}, d_{2,5,0,1}->d_{4,5,0,1}, d_{2,5,0,3}->d_{4,5,0,3}, d_{2,5,0,4}->d_{4,5,0,2}, d_{2,5,1,3}->d_{4,5,1,3}, d_{2,5,1,4}->d_{4,5,1,2}, d_{2,5,3,4}->d_{4,5,2,3}, d_{3,4,0,1}->d_{2,3,0,1}, d_{3,4,0,2}->d_{2,3,0,4}, d_{3,4,0,5}->d_{2,3,0,5}, d_{3,4,1,2}->d_{2,3,1,4}, d_{3,4,1,5}->d_{2,3,1,5}, d_{3,4,2,5}->d_{2,3,4,5}, d_{3,5,0,2}->d_{3,5,0,4}, d_{3,5,0,4}->d_{3,5,0,2}, d_{3,5,1,2}->d_{3,5,1,4}, d_{3,5,1,4}->d_{3,5,1,2}, d_{4,5,0,1}->d_{2,5,0,1}, d_{4,5,0,2}->d_{2,5,0,4}, d_{4,5,0,3}->d_{2,5,0,3}, d_{4,5,1,2}->d_{2,5,1,4}, d_{4,5,1,3}->d_{2,5,1,3}, d_{4,5,2,3}->d_{2,5,3,4}
+
+Permutation #3:
+  Bonds: r_{0,2}->r_{0,5}, r_{0,5}->r_{0,2}, r_{1,2}->r_{1,5}, r_{1,5}->r_{1,2}, r_{2,3}->r_{3,5}, r_{2,4}->r_{4,5}, r_{3,5}->r_{2,3}, r_{4,5}->r_{2,4}
+  Angles: theta^{0}_{1,2}->theta^{0}_{1,5}, theta^{0}_{1,5}->theta^{0}_{1,2}, theta^{0}_{2,3}->theta^{0}_{3,5}, theta^{0}_{2,4}->theta^{0}_{4,5}, theta^{0}_{3,5}->theta^{0}_{2,3}, theta^{0}_{4,5}->theta^{0}_{2,4}, theta^{1}_{0,2}->theta^{1}_{0,5}, theta^{1}_{0,5}->theta^{1}_{0,2}, theta^{1}_{2,3}->theta^{1}_{3,5}, theta^{1}_{2,4}->theta^{1}_{4,5}, theta^{1}_{3,5}->theta^{1}_{2,3}, theta^{1}_{4,5}->theta^{1}_{2,4}, theta^{2}_{0,1}->theta^{5}_{0,1}, theta^{2}_{0,3}->theta^{5}_{0,3}, theta^{2}_{0,4}->theta^{5}_{0,4}, theta^{2}_{0,5}->theta^{5}_{0,2}, theta^{2}_{1,3}->theta^{5}_{1,3}, theta^{2}_{1,4}->theta^{5}_{1,4}, theta^{2}_{1,5}->theta^{5}_{1,2}, theta^{2}_{3,4}->theta^{5}_{3,4}, theta^{2}_{3,5}->theta^{5}_{2,3}, theta^{2}_{4,5}->theta^{5}_{2,4}, theta^{3}_{0,2}->theta^{3}_{0,5}, theta^{3}_{0,5}->theta^{3}_{0,2}, theta^{3}_{1,2}->theta^{3}_{1,5}, theta^{3}_{1,5}->theta^{3}_{1,2}, theta^{3}_{2,4}->theta^{3}_{4,5}, theta^{3}_{4,5}->theta^{3}_{2,4}, theta^{4}_{0,2}->theta^{4}_{0,5}, theta^{4}_{0,5}->theta^{4}_{0,2}, theta^{4}_{1,2}->theta^{4}_{1,5}, theta^{4}_{1,5}->theta^{4}_{1,2}, theta^{4}_{2,3}->theta^{4}_{3,5}, theta^{4}_{3,5}->theta^{4}_{2,3}, theta^{5}_{0,1}->theta^{2}_{0,1}, theta^{5}_{0,2}->theta^{2}_{0,5}, theta^{5}_{0,3}->theta^{2}_{0,3}, theta^{5}_{0,4}->theta^{2}_{0,4}, theta^{5}_{1,2}->theta^{2}_{1,5}, theta^{5}_{1,3}->theta^{2}_{1,3}, theta^{5}_{1,4}->theta^{2}_{1,4}, theta^{5}_{2,3}->theta^{2}_{3,5}, theta^{5}_{2,4}->theta^{2}_{4,5}, theta^{5}_{3,4}->theta^{2}_{3,4}
+  Dihedrals: d_{0,1,2,3}->d_{0,1,3,5}, d_{0,1,2,4}->d_{0,1,4,5}, d_{0,1,3,5}->d_{0,1,2,3}, d_{0,1,4,5}->d_{0,1,2,4}, d_{0,2,1,3}->d_{0,5,1,3}, d_{0,2,1,4}->d_{0,5,1,4}, d_{0,2,1,5}->d_{0,5,1,2}, d_{0,2,3,4}->d_{0,5,3,4}, d_{0,2,3,5}->d_{0,5,2,3}, d_{0,2,4,5}->d_{0,5,2,4}, d_{0,3,1,2}->d_{0,3,1,5}, d_{0,3,1,5}->d_{0,3,1,2}, d_{0,3,2,4}->d_{0,3,4,5}, d_{0,3,4,5}->d_{0,3,2,4}, d_{0,4,1,2}->d_{0,4,1,5}, d_{0,4,1,5}->d_{0,4,1,2}, d_{0,4,2,3}->d_{0,4,3,5}, d_{0,4,3,5}->d_{0,4,2,3}, d_{0,5,1,2}->d_{0,2,1,5}, d_{0,5,1,3}->d_{0,2,1,3}, d_{0,5,1,4}->d_{0,2,1,4}, d_{0,5,2,3}->d_{0,2,3,5}, d_{0,5,2,4}->d_{0,2,4,5}, d_{0,5,3,4}->d_{0,2,3,4}, d_{1,2,0,3}->d_{1,5,0,3}, d_{1,2,0,4}->d_{1,5,0,4}, d_{1,2,0,5}->d_{1,5,0,2}, d_{1,2,3,4}->d_{1,5,3,4}, d_{1,2,3,5}->d_{1,5,2,3}, d_{1,2,4,5}->d_{1,5,2,4}, d_{1,3,0,2}->d_{1,3,0,5}, d_{1,3,0,5}->d_{1,3,0,2}, d_{1,3,2,4}->d_{1,3,4,5}, d_{1,3,4,5}->d_{1,3,2,4}, d_{1,4,0,2}->d_{1,4,0,5}, d_{1,4,0,5}->d_{1,4,0,2}, d_{1,4,2,3}->d_{1,4,3,5}, d_{1,4,3,5}->d_{1,4,2,3}, d_{1,5,0,2}->d_{1,2,0,5}, d_{1,5,0,3}->d_{1,2,0,3}, d_{1,5,0,4}->d_{1,2,0,4}, d_{1,5,2,3}->d_{1,2,3,5}, d_{1,5,2,4}->d_{1,2,4,5}, d_{1,5,3,4}->d_{1,2,3,4}, d_{2,3,0,1}->d_{3,5,0,1}, d_{2,3,0,4}->d_{3,5,0,4}, d_{2,3,0,5}->d_{3,5,0,2}, d_{2,3,1,4}->d_{3,5,1,4}, d_{2,3,1,5}->d_{3,5,1,2}, d_{2,3,4,5}->d_{3,5,2,4}, d_{2,4,0,1}->d_{4,5,0,1}, d_{2,4,0,3}->d_{4,5,0,3}, d_{2,4,0,5}->d_{4,5,0,2}, d_{2,4,1,3}->d_{4,5,1,3}, d_{2,4,1,5}->d_{4,5,1,2}, d_{2,4,3,5}->d_{4,5,2,3}, d_{3,4,0,2}->d_{3,4,0,5}, d_{3,4,0,5}->d_{3,4,0,2}, d_{3,4,1,2}->d_{3,4,1,5}, d_{3,4,1,5}->d_{3,4,1,2}, d_{3,5,0,1}->d_{2,3,0,1}, d_{3,5,0,2}->d_{2,3,0,5}, d_{3,5,0,4}->d_{2,3,0,4}, d_{3,5,1,2}->d_{2,3,1,5}, d_{3,5,1,4}->d_{2,3,1,4}, d_{3,5,2,4}->d_{2,3,4,5}, d_{4,5,0,1}->d_{2,4,0,1}, d_{4,5,0,2}->d_{2,4,0,5}, d_{4,5,0,3}->d_{2,4,0,3}, d_{4,5,1,2}->d_{2,4,1,5}, d_{4,5,1,3}->d_{2,4,1,3}, d_{4,5,2,3}->d_{2,4,3,5}
+
+[Block Interaction Graph IndependentMat] (Order1Count=3, 1=direct edge/correlated, 0=no direct edge)
+     0  1  2 
+ 0:  1  0  0 
+ 1:  0  1  1 
+ 2:  0  1  1 
+============== End of action and representation demo ===============
+
+======== Console initialized successfully ===============
+
+╔═══════════════════════════════════════════════════════════╗
+║  FI Generator Console Status                              ║
+╚═══════════════════════════════════════════════════════════╝
+Current Order: 1
+XYAmount (features): 15
+Total MonomialSets: 3
+
+Monomials by order:
+  Order 1: 3 monomials (3 generators)
+
+=== Order-1 Orbits (Order1Count=3) ===
+FeatureAmount (bond+angle+dihedral): 15
+  Bonds: 3, Angles: 0, Dihedrals: 0
+
+  Block No.0 [order=1, terms=1] (Bond)
+    features: 0
+
+  Block No.1 [order=1, terms=8] (Bond)
+    features: 1, 2, 3, 4, 5, 6, 7, 8
+
+  Block No.2 [order=1, terms=6] (Bond)
+    features: 9, 10, 11, 12, 13, 14
+
+============== End of console demo ===============
+
+======== Generating polynomials from order 2 to 5 ===============
+
+[Order 1]
+  Current order: FI=3, PIP=0, Total=3
+  Current lengths: FI=15, PIP=0, Total=15
+  Cumulative: FI=3, PIP=0, Total=3
+  Cumulative lengths: FI=15, PIP=0, Total=15
+
+[Order 2] (Time: 0.000000000 s = 0ms)
+  Current order: FI=6, PIP=6, Total=12
+  Current lengths: FI=134, PIP=106, Total=240
+  Cumulative: FI=9, PIP=6, Total=15
+  Cumulative lengths: FI=149, PIP=106, Total=255
+
+[Order 3] (Time: 0.000000000 s = 0ms)
+  Current order: FI=13, PIP=28, Total=41
+  Current lengths: FI=768, PIP=1272, Total=2040
+  Cumulative: FI=22, PIP=34, Total=56
+  Cumulative lengths: FI=917, PIP=1378, Total=2295
+
+[Order 4] (Time: 0.000000000 s = 0ms)
+  Current order: FI=26, PIP=111, Total=137
+  Current lengths: FI=2388, PIP=9852, Total=12240
+  Cumulative: FI=48, PIP=145, Total=193
+  Cumulative lengths: FI=3305, PIP=11230, Total=14535
+
+[Order 5] (Time: 0.020000000 s = 20ms)
+  Current order: FI=37, PIP=378, Total=415
+  Current lengths: FI=5020, PIP=53120, Total=58140
+  Cumulative: FI=85, PIP=523, Total=608
+  Cumulative lengths: FI=8325, PIP=64350, Total=72675
+
+Generation order CPU-time sum (orders 2 through 5): 0.020000000 s = 20ms
+  Scope: sum of the printed per-order console.Next() CPU times; order 1 and other program stages are excluded.
+
+======== Generation complete ===============
